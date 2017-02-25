@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:50,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{index:[],modul:[],page:0,search:0},titles:["Thinking in Everything"],titleterms:{about:[],curios:[],document:[],everyth:0,indic:[],tabl:[],taog:[],think:0,welcom:[]}})
