@@ -3,24 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Thinking in Everything
+Taoge's Thoughts
 =====================================
+
+
 
 .. toctree::
    :maxdepth: 2
 
+   intercom_intro
+   feed
 
 
 
-.. feed::
-   :rss: index.rss
-   :title: Taoge Feed
-   :description: Things abount Books and Programming
-   :link: http://blog.heytaoge.com
 
-   welcome
+
+
    
 
 
 
-* :ref:`search`
+
