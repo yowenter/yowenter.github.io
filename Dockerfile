@@ -20,7 +20,7 @@ RUN pip install  -r /usr/src/app/requirements.txt
 
 COPY . /usr/src/app
 
-WORKDIR /usr/src/app/docs
+WORKDIR /usr/src/app
 
 RUN make html
 RUN cp /usr/src/app/nginx_base.conf /etc/nginx/nginx.conf
