@@ -12,5 +12,15 @@ Thinking in Everything
 
 
 
+.. feed::
+   :rss: index.rss
+   :title: Taoge Feed
+   :description: Things abount Books and Programming
+   :link: http://blog.heytaoge.com
+
+   welcome
+   
+
+
 
 * :ref:`search`
