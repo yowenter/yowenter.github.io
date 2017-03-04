@@ -12,8 +12,10 @@ Rss Feed
    :rss: index.rss
    :title: Taoge Blog
    :description: 所见，所闻，所思
-   :link: http://blog.heytaoge.com
+   :link: http://blog.heytaoge.com/
 
    intercom_intro
+   manage/time_manage
+
 
 

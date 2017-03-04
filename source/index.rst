@@ -10,8 +10,10 @@ Taoge's Thoughts
 
 .. toctree::
    :maxdepth: 2
+   :glob:
 
    intercom_intro
+   manage/*
    feed
 
 
