@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
-    <title>Taoge Blog</title>
+    <title>Taoge's Thoughts</title>
     <link>http://blog.heytaoge.com/</link>
     <description>所见，所闻，所思</description>
-    <lastBuildDate>Sat, 04 Mar 2017 06:31:52 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Mar 2017 09:12:27 GMT</lastBuildDate>
     <generator>sphinxcontrib-newsfeed</generator>
     <item>
-      <title>如何使用 Intercom 用户运营</title>
-      <link>http://blog.heytaoge.com/intercom_intro.html</link>
+      <title>我们程序员是如何让自己失业的</title>
+      <link>http://blog.heytaoge.com/about_tech.html</link>
       <description>&lt;div class="compound"&gt;
-&lt;p class="compound-first"&gt;用户运营的目标，即用户增长。&lt;/p&gt;
-&lt;p class="compound-middle"&gt;那么我们如何用 Intercom 达到这个目标呢 ？&lt;/p&gt;
-&lt;p class="compound-middle"&gt;我们需要将这个目标拆解成两部分,&lt;/p&gt;
-&lt;blockquote class="compound-middle"&gt;
-&lt;div&gt;&lt;ul class="simple"&gt;
-&lt;li&gt;增长什么用户 ？&lt;/li&gt;
-&lt;li&gt;增长有什么手段 ？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p class="compound-middle"&gt;Intercom 为了解决这两个问题，主要有以下两种手段。&lt;/p&gt;
-&lt;p class="compound-middle"&gt;&lt;strong&gt;Segment&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="compound-middle highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Segment, 原意为碎片化，开发过 Android 的 同学应该不陌生。
-intercom 使用 segment 将用户分类，
-从而分类出 有价值的用户，即将流失的用户，新用户 等。
-对不同的用户采取不同的方法，比如激活新用户，挽留流失用户，
-实现精准打击。
-&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote class="compound-first"&gt;
+&lt;div&gt;物理的大厦已经建成，剩下的都是添砖加瓦，只是还有几朵乌云罢了。&lt;/div&gt;&lt;/blockquote&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;当我们在说 Docker和微服务的时候，我们在说什么？&lt;/div&gt;
+&lt;div class="line"&gt;当我们谈论 Github引领开源时代的时候，我们又意识到什么？&lt;/div&gt;
 &lt;/div&gt;
-&lt;p class="compound-middle"&gt;&lt;strong&gt;AutoMessage&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="compound-middle highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;AutoMessage 自动消息， 基于 Segment 的精准分类， 利用自动消息主动出击。
-想一想这个场景， 你在试用某个 SaaS 产品时，遇到了一些困难，正准备关闭页面时，
-一个漂亮妹子的头像亮了起来，亲切的问你需要什么帮助。 你肯定会产生被关心的感觉，
-而这也让你对这个产品有了不错的第一印象。
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;IT的基础能力正在被云计算标准化，IT的业务能力正在碎片化，&lt;/div&gt;
+&lt;div class="line"&gt;最后每个IT服务都变成了互联网上的一个细胞，寄生在鲸鱼（Docker）上，&lt;/div&gt;
+&lt;div class="line"&gt;而鲸鱼漂浮在云计算的海洋之上。&lt;/div&gt;
 &lt;/div&gt;
-&lt;ul class="compound-last simple"&gt;
-&lt;li&gt;Intercom:  &lt;a class="reference external" href="https://www.intercom.com/"&gt;https://www.intercom.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Intercom Enagagement: &lt;a class="reference external" href="https://www.intercom.com/customer-engagement"&gt;https://www.intercom.com/customer-engagement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;那个时候，我们程序员将逐步失业。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="compound-middle"&gt;我们程序员是如何一步一步解放自己的生产力，最后失业的？&lt;/p&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;起初，天地混沌于一物，方有盘古开天辟地，而后有了计算机。&lt;/div&gt;
+&lt;div class="line"&gt;神说，要有连接，于是万物基因开始交流，而后有了互联网。&lt;/div&gt;
+&lt;div class="line"&gt;先知说，这还不够，我们需要通天塔来到达天堂，要活在永恒不灭的境地。&lt;/div&gt;
+&lt;div class="line"&gt;所以有了程序员，来建造通天塔。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;每建造一层，我们手中的工具就升级换代一次，从钉子换成凿子。&lt;/div&gt;
+&lt;div class="line"&gt;就这样随着摩尔定律的增长，我们有更好的生产工具，来建造更好的服务。&lt;/div&gt;
+&lt;div class="line"&gt;从0到1，从二进制到汇编，从汇编到C，从 C 到 Python，再到大数据。&lt;/div&gt;
+&lt;div class="line"&gt;抽象愈多，接口愈简洁，我们就像玩乐高似的，仿佛可以建造任何东西。&lt;/div&gt;
+&lt;div class="line"&gt;不断地追求自动化，不断追求抽象分层化，我们走进了碎片化的时代。&lt;/div&gt;
+&lt;div class="line"&gt;计算能力的碎片化，业务服务的碎片化。碎片化达到一定标准后，我们迎来了云计算的时代。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-last line-block"&gt;
+&lt;div class="line"&gt;也就是现在，技术解决方案百家齐鸣，我们迈入智能化。&lt;/div&gt;
+&lt;div class="line"&gt;智能来自于数据，我们把数据存在云端，使用云端的服务，为终端用户提供个性化服务。&lt;/div&gt;
+&lt;div class="line"&gt;将只有两家 IT公司存活下来，一个提供智能数据云计算平台，另一个也是。&lt;/div&gt;
+&lt;div class="line"&gt;最后，我们重新发明了自己。&lt;/div&gt;
+&lt;div class="line"&gt;我们会做一个实验，这个实验叫做地球，来解决宇宙，生命和自由的本质这个问题。&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
-      <guid>http://blog.heytaoge.com/intercom_intro.html</guid>
-      <pubDate>Sat, 25 Feb 2017 00:00:00 GMT</pubDate>
+      <guid>http://blog.heytaoge.com/about_tech.html</guid>
+      <pubDate>Sat, 18 Mar 2017 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>3 分钟学会时间管理</title>
@@ -114,6 +121,44 @@ intercom 使用 segment 将用户分类，
 </description>
       <guid>http://blog.heytaoge.com/manage/time_manage.html</guid>
       <pubDate>Sat, 04 Mar 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>如何使用 Intercom 用户运营</title>
+      <link>http://blog.heytaoge.com/intercom_intro.html</link>
+      <description>&lt;div class="compound"&gt;
+&lt;p class="compound-first"&gt;用户运营的目标，即用户增长。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;那么我们如何用 Intercom 达到这个目标呢 ？&lt;/p&gt;
+&lt;p class="compound-middle"&gt;我们需要将这个目标拆解成两部分,&lt;/p&gt;
+&lt;blockquote class="compound-middle"&gt;
+&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;增长什么用户 ？&lt;/li&gt;
+&lt;li&gt;增长有什么手段 ？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p class="compound-middle"&gt;Intercom 为了解决这两个问题，主要有以下两种手段。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;&lt;strong&gt;Segment&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="compound-middle highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Segment, 原意为碎片化，开发过 Android 的 同学应该不陌生。
+intercom 使用 segment 将用户分类，
+从而分类出 有价值的用户，即将流失的用户，新用户 等。
+对不同的用户采取不同的方法，比如激活新用户，挽留流失用户，
+实现精准打击。
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="compound-middle"&gt;&lt;strong&gt;AutoMessage&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="compound-middle highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;AutoMessage 自动消息， 基于 Segment 的精准分类， 利用自动消息主动出击。
+想一想这个场景， 你在试用某个 SaaS 产品时，遇到了一些困难，正准备关闭页面时，
+一个漂亮妹子的头像亮了起来，亲切的问你需要什么帮助。 你肯定会产生被关心的感觉，
+而这也让你对这个产品有了不错的第一印象。
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul class="compound-last simple"&gt;
+&lt;li&gt;Intercom:  &lt;a class="reference external" href="https://www.intercom.com/"&gt;https://www.intercom.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Intercom Enagagement: &lt;a class="reference external" href="https://www.intercom.com/customer-engagement"&gt;https://www.intercom.com/customer-engagement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+      <guid>http://blog.heytaoge.com/intercom_intro.html</guid>
+      <pubDate>Sat, 25 Feb 2017 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

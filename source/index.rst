@@ -9,12 +9,15 @@ Taoge's Thoughts
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
 
+   about_tech
    intercom_intro
    manage/*
+
    feed
+   me
 
 
 
