@@ -20,6 +20,12 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import alabaster
+
+html_theme_path = [alabaster.get_path()]
+extensions = ['alabaster']
+html_theme = 'alabaster'
+
 
 # -- General configuration ------------------------------------------------
 
@@ -82,13 +88,34 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'logo': 'logo.png',
+    'logo_name':"Taoge's Blog",
+    'description':"Taoge's thoughts about programming, life and everything",
+
+    "github_user":"yowenter",
+    "github_repo":"yowenter.github.io",
+    "github_type":"follow",
+    "github_count":False,
+
+
+
+
+}
+
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'searchbox.html'
+    ]
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

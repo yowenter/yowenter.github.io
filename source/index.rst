@@ -9,7 +9,6 @@ Taoge's Thoughts
 
 
 .. toctree::
-   :maxdepth: 1
    :glob:
 
    about_tech
