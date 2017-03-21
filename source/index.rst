@@ -15,7 +15,7 @@ Taoge's Thoughts
    about_tech
    intercom_intro
    manage/*
-
+   recommend
    feed
    me
 
