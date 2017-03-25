@@ -14,6 +14,7 @@ Rss Feed
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   my_projects/search_job
    about_tech
    manage/time_manage
    intercom_intro

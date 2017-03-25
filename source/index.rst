@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Taoge's Thoughts
+Taoge's Blog
 =====================================
 
 
@@ -11,6 +11,7 @@ Taoge's Thoughts
 .. toctree::
    :glob:
 
+   my_projects/search_job
    about_tech
    intercom_intro
    manage/*
