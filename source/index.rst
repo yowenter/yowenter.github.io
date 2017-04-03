@@ -11,6 +11,7 @@ Taoge's Blog
 .. toctree::
    :glob:
 
+   thoughts/100_times_effective_programmer
    my_projects/search_job
    about_tech
    intercom_intro

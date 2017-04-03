@@ -4,8 +4,63 @@
     <title>Taoge's Thoughts</title>
     <link>http://blog.heytaoge.com/</link>
     <description>所见，所闻，所思</description>
-    <lastBuildDate>Sat, 25 Mar 2017 16:12:02 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Apr 2017 04:31:23 GMT</lastBuildDate>
     <generator>sphinxcontrib-newsfeed</generator>
+    <item>
+      <title>百倍程序员的杠杆率和加速度</title>
+      <link>http://blog.heytaoge.com/thoughts/100_times_effective_programmer.html</link>
+      <description>&lt;div class="compound"&gt;
+&lt;blockquote class="compound-first"&gt;
+&lt;div&gt;韩信点兵，多多益善。&lt;/div&gt;&lt;/blockquote&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;最近有不少关于百倍程序员的传言，据说这种程序员能以一当百。&lt;/div&gt;
+&lt;div class="line"&gt;一旦有了这种传言，雇主趋之若鹜，而那些一般的程序员，仿佛听到了屠龙宝刀的现身一样，一片哗然。&lt;/div&gt;
+&lt;div class="line"&gt;作为野生程序员，自然也不能免俗，也要看个究竟。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="compound-middle"&gt;&lt;strong&gt;百倍程序员真的存在吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;没错，百倍程序员是真的存在的，我公司就有一个。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="compound-middle"&gt;&lt;strong&gt;百倍程序员的特征？&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;这种程序员，当然不是不食烟火的，也不是传说中用指针在磁盘上刻出一个 Windows 操作系统的上古程序员。&lt;/div&gt;
+&lt;div class="line"&gt;据我观察，百倍程序员有以下特征:&lt;/div&gt;
+&lt;/div&gt;
+&lt;blockquote class="compound-middle"&gt;
+&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;智商高于平均值约四分位&lt;/li&gt;
+&lt;li&gt;读 IT 类书逾千本&lt;/li&gt;
+&lt;li&gt;工作超过 5 年&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p class="compound-middle"&gt;还有些特征不可量化，就不提了。比如说穿着。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;&lt;strong&gt;为什么能百倍？&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="compound-middle highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;杠杆率和加速度。
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle line-block"&gt;
+&lt;div class="line"&gt;杠杆率，就是一个乘数的概念。常见的表述有货币乘数，金融杠杆，投资回报率，杠杆原理等等。&lt;/div&gt;
+&lt;div class="line"&gt;加速度，就是一个指数增长的概念。比如常见的 &lt;cite&gt;72&lt;/cite&gt; 定律，足见其威力之大。&lt;/div&gt;
+&lt;div class="line"&gt;正因为上面的特征，才有杠杆率高和加速度快的结果。&lt;/div&gt;
+&lt;div class="line"&gt;就好比，一个普通程序员只知道通过练习跑步来跑得快，而百倍程序员已经使用了轮子造出汽车。这就是杠杆率高的结果。&lt;/div&gt;
+&lt;div class="line"&gt;又比如，入门程序员看技术书籍，多有不懂，花费大量时间，却没学到什么真才实学。而百倍程序员则会使用索引，根据进行主题阅读，一日千里。这便是加速度快的结果。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="compound-middle"&gt;&lt;strong&gt;那存在千倍程序员吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="compound-middle highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;不存在，千倍以上就是企业家的事了。
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-last line-block"&gt;
+&lt;div class="line"&gt;纵使绝世高手能以一当百，然而一个人还是打不过一个军队的。&lt;/div&gt;
+&lt;div class="line"&gt;这时候，当我们力所能及达到百倍之后，我们就应该换个思路了。从十倍到百倍是纵向扩展，从百倍到亿倍则需要横向扩展。&lt;/div&gt;
+&lt;div class="line"&gt;比如，百倍程序员教导新手，那么新手可能达到十倍，那他只需要教会100个新手，那么他就能干出千倍的事情。&lt;/div&gt;
+&lt;div class="line"&gt;马云虽然不懂IT 知识，却能成就阿里。有不少是得益于他原是个老师，能够提升下属的杠杆率。&lt;/div&gt;
+&lt;div class="line"&gt;故曰，韩信点兵，多多益善也。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      <guid>http://blog.heytaoge.com/thoughts/100_times_effective_programmer.html</guid>
+      <pubDate>Sun, 02 Apr 2017 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>我的光辉事业</title>
       <link>http://blog.heytaoge.com/my_projects/search_job.html</link>
