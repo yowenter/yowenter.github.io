@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hadoop 2.8.0 半自动化安装 &#8212; Beta Life</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="百倍程序员的杠杆率和加速度" href="../thoughts/100_times_effective_programmer.html" />
+    <link rel="prev" title="Hadoop 21天从入门到放弃" href="../hadoop_intro.html" />
+	<link rel="alternate"
+		type="application/rss+xml"
+		title="Taoge Blog"
+		href="/index.rss" />
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-69141957-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/22190fee.js","daovoice")
+		daovoice('init', {
+		app_id: "22190fee"
+		});
+		daovoice('update');
+		</script>
+	
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hadoop-2-8-0">
+<h1>Hadoop 2.8.0 半自动化安装<a class="headerlink" href="#hadoop-2-8-0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1, 虚拟机准备<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">俺使用 VirtualBox 创建了 3 台虚拟机，分别叫 <cite>ubuntu-1</cite>, <cite>ubuntu-2</cite>, <cite>ubuntu-3</cite> 。</div>
+<div class="line">均配置了 4 个网卡, 网卡模式有 桥接模式，内部模式 还有 内部模式。</div>
+<div class="line">桥接模式可以供宿主机访问，内部模式用于 3 台虚机之间访问。</div>
+<div class="line">内部模式的主机分别为 <cite>ubuntu-1 10.10.10.1</cite>,  <cite>ubuntu-2 10.10.10.2</cite>,  <cite>ubuntu-3 10.10.10.3</cite> 。</div>
+</div>
+</div>
+<div class="section" id="hadoop">
+<h2>2, Hadoop 分发<a class="headerlink" href="#hadoop" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">安装分布式软件最让新手头疼的是，一台机器一台机器地登录上去，一条命令一条命令的执行，非常耗时间，让学习的热情一下子冷却了一半。</div>
+<div class="line">所幸，我们可以借助运维神器 <cite>ansible</cite> 一键 完成机器的初始化工作。</div>
+<div class="line">ansible 有一个 playbook 的概念，有点像写剧本的意味。我编写了一个如下的play:</div>
+</div>
+<p><strong>play.yml</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">---</span>
+<span class="o">-</span> <span class="n">hosts</span><span class="p">:</span> <span class="n">taoge</span><span class="o">-</span><span class="n">ubuntu</span>
+  <span class="n">tasks</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">create</span> <span class="n">hadoop</span> <span class="n">user</span> <span class="ow">and</span> <span class="n">generate</span> <span class="n">ssh</span> <span class="n">key</span>
+    <span class="n">user</span><span class="p">:</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">hadoop</span>
+        <span class="n">password</span><span class="p">:</span> <span class="n">hadoop</span>
+        <span class="n">shell</span><span class="p">:</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+        <span class="n">generate_ssh_key</span><span class="p">:</span> <span class="n">yes</span>
+        <span class="n">ssh_key_bits</span><span class="p">:</span> <span class="mi">2048</span>
+        <span class="n">ssh_key_file</span><span class="p">:</span> <span class="o">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span>
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">add</span> <span class="n">authorize</span> <span class="n">key</span> <span class="n">to</span> <span class="n">slaves</span>
+    <span class="n">authorized_key</span><span class="p">:</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">hadoop</span>
+        <span class="n">state</span><span class="p">:</span> <span class="n">present</span>
+        <span class="n">key</span><span class="p">:</span> <span class="s2">&quot;{{ lookup(&#39;file&#39;, &#39;/home/hadoop/.ssh/id_rsa.pub&#39;)}}&quot;</span>
+
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">copy</span> <span class="n">hadoop</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mf">0.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+    <span class="n">copy</span><span class="p">:</span>
+        <span class="n">src</span><span class="p">:</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mf">0.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+        <span class="n">dest</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mf">0.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+        <span class="n">owner</span><span class="p">:</span> <span class="n">hadoop</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="mi">0644</span>
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">unarchive</span> <span class="n">hadoop</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mf">0.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+    <span class="n">unarchive</span><span class="p">:</span>
+        <span class="n">src</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mf">0.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+        <span class="n">dest</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span>
+        <span class="n">remote_src</span><span class="p">:</span> <span class="kc">True</span>
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">add</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+    <span class="n">lineinfile</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+        <span class="n">line</span><span class="p">:</span> <span class="s1">&#39;10.10.10.1       hadoop-1&#39;</span>
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">add</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+    <span class="n">lineinfile</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+        <span class="n">line</span><span class="p">:</span> <span class="s1">&#39;10.10.10.2       hadoop-2&#39;</span>
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">add</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+    <span class="n">lineinfile</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+        <span class="n">line</span><span class="p">:</span> <span class="s1">&#39;10.10.10.3       hadoop-3&#39;</span>
+
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">add</span> <span class="n">JAVA_HOME</span>
+    <span class="n">lineinfile</span><span class="p">:</span>
+        <span class="n">path</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/.</span><span class="n">bashrc</span>
+        <span class="n">line</span><span class="p">:</span> <span class="s1">&#39;export JAVA_HOME=/opt/jdk1.8.0_131/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>3, Hadoop 配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Hadoop 配置使用了 XML 格式，为什么用 XML 而不用其它的格式呢？这是个好问题。</div>
+<div class="line">配置 DFS 的话，只要配置 两个文件: <cite>core-site.xml</cite>, <cite>hdfs-site.xml</cite>。 配置文件都在 etc/hadoop 文件夹里。</div>
+<div class="line"><cite>core-site.xml</cite> 在 三节点设置都一样， <cite>hdfs-site.xml</cite> 在 namenode 和 datanode 不一样。</div>
+<div class="line">我的一些配置如下:</div>
+</div>
+<p><strong>NameNode</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">core</span><span class="o">-</span><span class="n">site</span><span class="o">.</span><span class="n">xml</span><span class="p">:</span>
+
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">fs</span><span class="o">.</span><span class="n">defaultFS</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="n">hdfs</span><span class="p">:</span><span class="o">//</span><span class="n">hadoop</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">9000</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+
+
+<span class="n">hdfs</span><span class="o">-</span><span class="n">site</span><span class="o">.</span><span class="n">xml</span>
+
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="o">.</span><span class="n">replication</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="o">.</span><span class="n">namenode</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">dir</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">nn</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="o">.</span><span class="n">namenode</span><span class="o">.</span><span class="n">handler</span><span class="o">.</span><span class="n">count</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="o">.</span><span class="n">hosts</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">hosts</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>DataNode</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hdfs</span><span class="o">-</span><span class="n">xite</span><span class="o">.</span><span class="n">xml</span>
+
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="o">.</span><span class="n">replication</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="nb">property</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="o">.</span><span class="n">datanode</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dir</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;/</span><span class="n">home</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">dd</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">property</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="up-up-up">
+<h2>4, Up, Up, Up !<a class="headerlink" href="#up-up-up" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Hadoop 的分布式存储系统是 <cite>Master-Slave</cite> 模式，也就是一个包工头和多个工人协作的模式。</div>
+<div class="line">所以节点类型有 2 种: <cite>NameNode</cite>, <cite>DataNode</cite>, 也就是控制流和数据流的区别。</div>
+<div class="line">俺设置的是 <cite>NameNode</cite> 是 <cite>hadoop-1</cite>, <cite>DataNode</cite> 是 <cite>hadoop-2</cite> 和 <cite>hadoop-3</cite> 。</div>
+<div class="line">在 <cite>NameNode</cite> 上执行:  <cite>bin/hdfs  namenode &gt; namenode.log 2&gt;&amp;1 &amp;</cite></div>
+<div class="line">在 <cite>DataNode</cite> 上执行:  <cite>bin/hdfs  datanode &gt; datanode.log 2&gt;&amp;1 &amp;</cite></div>
+<div class="line">好，现在 Hadoop DFS 已经搭建起来了！</div>
+<div class="line">欢迎来到大数据的世界。 让大象撑爆您的容器或虚拟机吧！</div>
+</div>
+</div>
+<div class="section" id="q-a">
+<h2>Q&amp;A: 为什么我遇到了网上没有的问题?<a class="headerlink" href="#q-a" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">不可避免的，凡是学习一个新东西，总会有老手都知道，而新手百思不得其解的问题。</div>
+<div class="line">这时候就是考验 DEBUG 的能力的时候。</div>
+<div class="line">对此俺只有一个忠告 : 多喝水，仔细看日志。</div>
+</div>
+<ul>
+<li><p class="first">DataNode 不能连接到 NameNode, 连接被拒绝 ？</p>
+<blockquote>
+<div><p>一般情况下，NameNode 监听端口时绑定的 host 可能不同。比如 绑定localhost的时候只有本地可以访问。</p>
+</div></blockquote>
+</li>
+<li><p class="first">NameNode 启动总是显示 dfs 的文件夹为空 <a class="reference external" href="file:///">file:///</a>  ？</p>
+<blockquote>
+<div><p>很有可能启动时没有读取正确的配置，可以使用 ` bin/hdfs getconf` 这个命令来查看配置是否是自己写的配置。</p>
+</div></blockquote>
+</li>
+</ul>
+<p class="feed-meta">Published by <em class="feed-author">Taoge</em> on <em class="feed-date">2017-04-28</em></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Taoge's thoughts about programming, life and everything</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=yowenter&repo=yowenter.github.io&type=follow&count=False&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../hadoop_intro.html">Hadoop 21天从入门到放弃</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hadoop 2.8.0 半自动化安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1, 虚拟机准备</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hadoop">2, Hadoop 分发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3, Hadoop 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#up-up-up">4, Up, Up, Up !</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#q-a">Q&amp;A: 为什么我遇到了网上没有的问题?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/100_times_effective_programmer.html">百倍程序员的杠杆率和加速度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../my_projects/search_job.html">我的光辉事业</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_tech.html">我们程序员是如何让自己失业的</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intercom_intro.html">如何使用 Intercom 用户运营</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/time_manage.html">3 分钟学会时间管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommend.html">推荐的订阅源</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../feed.html">Rss Feed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../me.html">About Me</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Taoge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="../_sources/hadoop/hadoop_install.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

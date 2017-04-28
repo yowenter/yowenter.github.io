@@ -11,6 +11,7 @@ Taoge's Blog
 .. toctree::
    :glob:
 
+   hadoop_intro
    thoughts/100_times_effective_programmer
    my_projects/search_job
    about_tech
