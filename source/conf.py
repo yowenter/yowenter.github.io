@@ -128,7 +128,7 @@ html_favicon = "favicon.ico"
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Curiositydoc'
-html_title = "Beta Life"
+html_title = "Taoge"
 
 
 # -- Options for LaTeX output ---------------------------------------------
