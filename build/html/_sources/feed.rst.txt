@@ -14,6 +14,10 @@ Rss Feed
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+
+
+   hadoop/yarn_debug
+   hadoop/hadoop_install
    thoughts/100_times_effective_programmer
    my_projects/search_job
    about_tech
