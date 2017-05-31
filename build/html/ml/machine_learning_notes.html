@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>我的光辉事业 &#8212; Taoge</title>
+    <title>Andrew.Ng 机器学习笔记 &#8212; Taoge</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -27,8 +27,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="我们程序员是如何让自己失业的" href="../about_tech.html" />
-    <link rel="prev" title="百倍程序员的杠杆率和加速度" href="../thoughts/100_times_effective_programmer.html" />
+    <link rel="next" title="沉迷混杂信息的你，正在被时间抹去" href="../thoughts/information_management.html" />
+    <link rel="prev" title="Taoge’s Blog" href="../index.html" />
 	<link rel="alternate"
 		type="application/rss+xml"
 		title="Taoge Blog"
@@ -57,53 +57,42 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
-<h1>我的光辉事业<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p><strong>引子</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Oh, how I hate this living death which has swallowed all my teens,
-which is greedily devouring my youth, which will sap my prime,
-and in which my old age,
-if I am cursed with any, will be worn away!`
-
-                                     ---- &lt; MY BRILLIANT CAREER &gt;
+  <div class="section" id="andrew-ng">
+<h1>Andrew.Ng 机器学习笔记<a class="headerlink" href="#andrew-ng" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>啥是机器学习？<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><strong>ETP</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Experience</span>
+<span class="o">-</span> <span class="n">Task</span>
+<span class="o">-</span> <span class="n">Performance</span>
 </pre></div>
 </div>
-<p><strong>我想解决什么问题?</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>找工作难， 难于上青天。
-招人难， 难于蜀道行。
-</pre></div>
+<p>为了完成某项任务，通过训练，使得机器获取经验，从而达到很好的准确率。
+这就好比巴甫洛夫通过不断摇铃，使得狗有了预判接下来有食物吃的能力一样。</p>
+<p>那么，在机器学习的过程中，我们应该做什么呢？
+我们应该让机器有趋利避害的能力。这样，机器就会在不断的矫枉过正的曲线上趋于稳定。
+正如我们练习投篮一样，在不断的练习中，肌肉获取了大概以某种姿势，某种力道就能投进篮球。</p>
 </div>
-<div class="line-block">
-<div class="line">大家都有毕业时找工作的经历，在人山人海的地方，谁的青春不感到迷茫？</div>
-<div class="line">而当我们工作以后，才发现企业招人也不容易。</div>
-<div class="line">为什么我们之间存在如此大的鸿沟呢？</div>
+<div class="section" id="id2">
+<h2>啥是监督学习？<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>这是从经验获取知识的一个过程。
+就好比，在无数次看了股票的涨跌之后，我们习得了看见红色就高兴，看见绿色就悲伤的知识。
+相反的，对于无监督学习，则是我们没有告诉机器一些已知的结果，他也无从学习，只能天真的把距离近的划为一类，远的划为另一类。</p>
 </div>
-<p><strong>出现这个问题的可能原因是什么?</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">信息爆炸</span>
-<span class="n">信息不对称</span>
-</pre></div>
+<div class="section" id="id3">
+<h2>如何选择模型？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>这一切围绕 ETP 里的 Performance 进行选择。
+既要与现有的经验吻合，又不能太死板（过拟合），不能应付新事物。
+所以，选择好的代价函数 或者说惩罚函数是至关重要的。
+一般来说，好的代价函数我觉得要有以下考量：</p>
+<ul class="simple">
+<li>凸函数</li>
+<li>统计学的两类错误的权衡</li>
+</ul>
+<p>凸函数不会遇到局部最优的情况。
+两类错误的权衡，好比是错杀一千还是放过一千的考量。比如说信用卡诈骗和抓捕罪犯对两种错误权衡就不一样了。</p>
+<p class="feed-meta">Published by <em class="feed-author">Taoge</em> on <em class="feed-date">2017-05-31</em></p>
 </div>
-<div class="line-block">
-<div class="line">没错，互联网是个伟大的科技，正如所有的科技一样，它解决了老问题，也产生了新问题。</div>
-<div class="line">有人顺势飞起，有人一夜成名， 而大多数在沉默。</div>
-<div class="line">在我的想象中，互联网应该是P2P的，每个人都应从中受益，而不是被信息的洪流淹没。</div>
-</div>
-<p><strong>一个问题如果真的重要，那么它不应该早就被解决了吗?</strong></p>
-<div class="line-block">
-<div class="line">目前的搜索网站，无论是 Google 还是其他的垂直搜索引擎，绝大部分信息都是单向流动的。</div>
-<div class="line">扔狗不理包子式的信息流动，只会增加噪音，导致谁也找不到谁。</div>
-<div class="line">或者说，我们只能看见那些因为大众盲从而选举出来的次优结果，这都是网红美食的套路。</div>
-<div class="line">我是说，我们也许能试一试牵线搭桥。</div>
-</div>
-<p><strong>Let’s Do It!</strong></p>
-<p>这是我的 Github 项目 : <a class="reference external" href="https://github.com/yowenter/career-roadmap">https://github.com/yowenter/career-roadmap</a></p>
-<p>我希望它能做的，也是我正在做的：</p>
-<ol class="arabic simple">
-<li>Everyone knows his career roadmap</li>
-<li>Everyone can find best job</li>
-<li>Every company can find best employee</li>
-</ol>
-<p class="feed-meta">Published by <em class="feed-author">Wenter</em> on <em class="feed-date">2017-03-25</em></p>
 </div>
 
 
@@ -137,11 +126,16 @@ if I am cursed with any, will be worn away!`
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../ml/machine_learning_notes.html">Andrew.Ng 机器学习笔记</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Andrew.Ng 机器学习笔记</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">啥是机器学习？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">啥是监督学习？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">如何选择模型？</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../thoughts/information_management.html">沉迷混杂信息的你，正在被时间抹去</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hadoop_intro.html">Hadoop 21天从入门到放弃</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../thoughts/100_times_effective_programmer.html">百倍程序员的杠杆率和加速度</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">我的光辉事业</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../my_projects/search_job.html">我的光辉事业</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about_tech.html">我们程序员是如何让自己失业的</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intercom_intro.html">如何使用 Intercom 用户运营</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manage/time_manage.html">3 分钟学会时间管理</a></li>
@@ -173,7 +167,7 @@ if I am cursed with any, will be worn away!`
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="../_sources/my_projects/search_job.rst.txt"
+      <a href="../_sources/ml/machine_learning_notes.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

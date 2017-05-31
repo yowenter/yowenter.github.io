@@ -77,7 +77,7 @@ Yarn 启动
 **Reference**: 
 	Hadoop:The Definitive Guide, 4th Edition
 
-a
+
 
 .. feed-entry::
 	   :author: yowenter

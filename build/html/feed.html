@@ -62,6 +62,43 @@
 <p>这是我的 RSS Feed，你可以订阅 <a class="reference external" href="http://blog.heytaoge.com">http://blog.heytaoge.com</a>。</p>
 <div class="toctree-wrapper compound">
 </div>
+<div class="section" id="andrew-ng">
+<h2><a class="feed-ref reference internal" href="ml/machine_learning_notes.html#andrew-ng">Andrew.Ng 机器学习笔记</a><a class="headerlink" href="#andrew-ng" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>啥是机器学习？<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>ETP</strong></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Experience</span>
+<span class="o">-</span> <span class="n">Task</span>
+<span class="o">-</span> <span class="n">Performance</span>
+</pre></div>
+</div>
+<p>为了完成某项任务，通过训练，使得机器获取经验，从而达到很好的准确率。
+这就好比巴甫洛夫通过不断摇铃，使得狗有了预判接下来有食物吃的能力一样。</p>
+<p>那么，在机器学习的过程中，我们应该做什么呢？
+我们应该让机器有趋利避害的能力。这样，机器就会在不断的矫枉过正的曲线上趋于稳定。
+正如我们练习投篮一样，在不断的练习中，肌肉获取了大概以某种姿势，某种力道就能投进篮球。</p>
+</div>
+<div class="section" id="id2">
+<h3>啥是监督学习？<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>这是从经验获取知识的一个过程。
+就好比，在无数次看了股票的涨跌之后，我们习得了看见红色就高兴，看见绿色就悲伤的知识。
+相反的，对于无监督学习，则是我们没有告诉机器一些已知的结果，他也无从学习，只能天真的把距离近的划为一类，远的划为另一类。</p>
+</div>
+<div class="section" id="id3">
+<h3>如何选择模型？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>这一切围绕 ETP 里的 Performance 进行选择。
+既要与现有的经验吻合，又不能太死板（过拟合），不能应付新事物。
+所以，选择好的代价函数 或者说惩罚函数是至关重要的。
+一般来说，好的代价函数我觉得要有以下考量：</p>
+<ul class="simple">
+<li>凸函数</li>
+<li>统计学的两类错误的权衡</li>
+</ul>
+<p>凸函数不会遇到局部最优的情况。
+两类错误的权衡，好比是错杀一千还是放过一千的考量。比如说信用卡诈骗和抓捕罪犯对两种错误权衡就不一样了。</p>
+<p class="feed-meta">Published by <em class="feed-author">Taoge</em> on <em class="feed-date">2017-05-31</em></p>
+</div>
+</div>
 <div class="section" id="hadoop-2-8-0">
 <h2><a class="feed-ref reference internal" href="hadoop/hadoop_install.html#hadoop-2-8-0">Hadoop 2.8.0 半自动化安装</a><a class="headerlink" href="#hadoop-2-8-0" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
@@ -503,6 +540,7 @@ intercom 使用 segment 将用户分类，
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ml/machine_learning_notes.html">Andrew.Ng 机器学习笔记</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thoughts/information_management.html">沉迷混杂信息的你，正在被时间抹去</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hadoop_intro.html">Hadoop 21天从入门到放弃</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thoughts/100_times_effective_programmer.html">百倍程序员的杠杆率和加速度</a></li>
@@ -512,6 +550,7 @@ intercom 使用 segment 将用户分类，
 <li class="toctree-l1"><a class="reference internal" href="manage/time_manage.html">3 分钟学会时间管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recommend.html">推荐的订阅源</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rss Feed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml/machine_learning_notes.html">Andrew.Ng 机器学习笔记</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hadoop/yarn_debug.html">入门最后一站: OSX 搭建 Hadoop 开发环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hadoop/hadoop_install.html">Hadoop 2.8.0 半自动化安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="thoughts/100_times_effective_programmer.html">百倍程序员的杠杆率和加速度</a></li>
@@ -543,7 +582,7 @@ intercom 使用 segment 将用户分类，
       &copy;2017, Taoge.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |

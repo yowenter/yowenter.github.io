@@ -4,8 +4,51 @@
     <title>Taoge's Thoughts</title>
     <link>http://blog.heytaoge.com/</link>
     <description>所见，所闻，所思</description>
-    <lastBuildDate>Wed, 24 May 2017 06:28:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 31 May 2017 15:45:53 GMT</lastBuildDate>
     <generator>sphinxcontrib-newsfeed</generator>
+    <item>
+      <title>Andrew.Ng 机器学习笔记</title>
+      <link>http://blog.heytaoge.com/ml/machine_learning_notes.html</link>
+      <description>&lt;div class="compound"&gt;
+&lt;div class="compound-first section" id="id1"&gt;
+&lt;h1&gt;啥是机器学习？&lt;a class="headerlink" href="#id1" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;ETP&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Experience&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Task&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Performance&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;为了完成某项任务，通过训练，使得机器获取经验，从而达到很好的准确率。
+这就好比巴甫洛夫通过不断摇铃，使得狗有了预判接下来有食物吃的能力一样。&lt;/p&gt;
+&lt;p&gt;那么，在机器学习的过程中，我们应该做什么呢？
+我们应该让机器有趋利避害的能力。这样，机器就会在不断的矫枉过正的曲线上趋于稳定。
+正如我们练习投篮一样，在不断的练习中，肌肉获取了大概以某种姿势，某种力道就能投进篮球。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle section" id="id2"&gt;
+&lt;h1&gt;啥是监督学习？&lt;a class="headerlink" href="#id2" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;这是从经验获取知识的一个过程。
+就好比，在无数次看了股票的涨跌之后，我们习得了看见红色就高兴，看见绿色就悲伤的知识。
+相反的，对于无监督学习，则是我们没有告诉机器一些已知的结果，他也无从学习，只能天真的把距离近的划为一类，远的划为另一类。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="compound-last section" id="id3"&gt;
+&lt;h1&gt;如何选择模型？&lt;a class="headerlink" href="#id3" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;这一切围绕 ETP 里的 Performance 进行选择。
+既要与现有的经验吻合，又不能太死板（过拟合），不能应付新事物。
+所以，选择好的代价函数 或者说惩罚函数是至关重要的。
+一般来说，好的代价函数我觉得要有以下考量：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;凸函数&lt;/li&gt;
+&lt;li&gt;统计学的两类错误的权衡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;凸函数不会遇到局部最优的情况。
+两类错误的权衡，好比是错杀一千还是放过一千的考量。比如说信用卡诈骗和抓捕罪犯对两种错误权衡就不一样了。&lt;/p&gt;
+&lt;p class="feed-meta"&gt;Published by &lt;em class="feed-author"&gt;Taoge&lt;/em&gt; on &lt;em class="feed-date"&gt;2017-05-31&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      <guid>http://blog.heytaoge.com/ml/machine_learning_notes.html</guid>
+      <pubDate>Wed, 31 May 2017 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Hadoop 2.8.0 半自动化安装</title>
       <link>http://blog.heytaoge.com/hadoop/hadoop_install.html</link>
