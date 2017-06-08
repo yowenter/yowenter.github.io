@@ -106,6 +106,7 @@ html_theme_options = {
     "github_repo":"yowenter.github.io",
     "github_type":"follow",
     "github_count":False,
+    "font_family":None
 
 
 
