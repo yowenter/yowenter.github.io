@@ -11,6 +11,7 @@ Taoge's Blog
 .. toctree::
    :glob:
 
+   travel/*
    ml/*
    thoughts/information_management
    hadoop_intro

@@ -15,7 +15,7 @@ Rss Feed
    :link: http://blog.heytaoge.com/
 
 
-
+   travel/thailand_2017_06_15
    ml/machine_learning_notes
    hadoop/yarn_debug
    hadoop/hadoop_install
