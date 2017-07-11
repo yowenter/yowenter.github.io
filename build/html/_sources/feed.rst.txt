@@ -14,6 +14,7 @@ Rss Feed
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   thoughts/knowledge_base
    travel/thoughts_in_another_country
    travel/thailand_2017_06_15
    ml/machine_learning_notes

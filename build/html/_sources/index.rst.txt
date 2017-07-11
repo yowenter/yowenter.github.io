@@ -11,6 +11,7 @@ Taoge's Blog
 .. toctree::
    :glob:
 
+   thoughts/knowledge_base
    travel/*
    ml/*
    thoughts/information_management
