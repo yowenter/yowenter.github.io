@@ -11,6 +11,7 @@ Taoge's Blog
 .. toctree::
    :glob:
 
+   thoughts/is_k8s_the_google_gift
    thoughts/knowledge_base
    travel/*
    ml/*
