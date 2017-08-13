@@ -22,8 +22,10 @@ Taoge's Blog
    about_tech
    intercom_intro
    manage/*
+   other_platform
    feed
    me
+   
 
 
 

@@ -1,9 +1,9 @@
-Rss Feed
+订阅 Rss
 ===========================
 
 
 
-这是我的 RSS Feed，你可以订阅 http://blog.heytaoge.com。
+这是我的 RSS Feed，你可以订阅 http://blog.heytaoge.com 。
 
 
 
