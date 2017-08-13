@@ -47,7 +47,9 @@
 	| 豆瓣读书 https://book.douban.com/people/airywenter/
 
 
+我的项目
 
+	| 吃遍全世界 https://keepeat.github.io/eatoverworld/
 
 
 
