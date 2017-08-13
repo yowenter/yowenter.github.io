@@ -25,14 +25,17 @@ Taoge's Blog
    other_platform
    feed
    me
-   
+
+
+
+.. meta::
+
+   :description: Taoge's Blog , 关于互联网，关于生活的 思想碎片的收集与整理。
+   :keywords: yowenter, taoge blog, wenter.wu, 互联网, 云计算, 思维方式,
 
 
 
 
-
-
-   
 
 
 
