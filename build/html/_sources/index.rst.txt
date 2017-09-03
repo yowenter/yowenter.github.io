@@ -11,6 +11,7 @@ Taoge's Blog
 .. toctree::
    :glob:
 
+   thoughts/why_we_communicate
    thoughts/is_k8s_the_google_gift
    thoughts/knowledge_base
    travel/*
