@@ -14,6 +14,7 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   thoughts/find_job_by_github
    thoughts/why_we_communicate
    thoughts/is_k8s_the_google_gift
    thoughts/knowledge_base

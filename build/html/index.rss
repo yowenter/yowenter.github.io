@@ -4,8 +4,137 @@
     <title>Taoge's Thoughts</title>
     <link>http://blog.heytaoge.com/</link>
     <description>所见，所闻，所思</description>
-    <lastBuildDate>Sun, 03 Sep 2017 01:25:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 Sep 2017 14:38:02 GMT</lastBuildDate>
     <generator>sphinxcontrib-newsfeed</generator>
+    <item>
+      <title>Github 挖人机</title>
+      <link>http://blog.heytaoge.com/thoughts/find_job_by_github.html</link>
+      <description>&lt;div class="compound"&gt;
+&lt;p class="compound-middle"&gt;&lt;cite&gt;俗话说的好，有人的地方就有江湖。&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="compound-middle section" id="id1"&gt;
+&lt;h1&gt;信息聚集的乘数效应&lt;a class="headerlink" href="#id1" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;信息聚集是会产生倍增效果的。&lt;/div&gt;
+&lt;div class="line"&gt;蚁群，蜂窝，神经，互联网，这些东西都让我感到兴奋不已。&lt;/div&gt;
+&lt;div class="line"&gt;仿佛能看到胚胎有丝分裂的过程，又像看到一只草履虫仅靠趋利避害的特性不断演化成人。&lt;/div&gt;
+&lt;div class="line"&gt;观察此种连续的过程，就能发现奇点的存在。&lt;/div&gt;
+&lt;div class="line"&gt;这种网状结构的传播特征，简直就如同瘟疫一样。&lt;/div&gt;
+&lt;div class="line"&gt;谁也说不准在哪个时刻就爆发。&lt;/div&gt;
+&lt;div class="line"&gt;然而不是所有的东西，都能有爆炸的过程。&lt;/div&gt;
+&lt;div class="line"&gt;除非，它有一种链式反应的可燃性。&lt;/div&gt;
+&lt;div class="line"&gt;也就是好的吸引好的，坏的吸引坏的。&lt;/div&gt;
+&lt;div class="line"&gt;比如一个居民区，臭名昭著的居民区都是坏蛋产生坏蛋的。&lt;/div&gt;
+&lt;div class="line"&gt;而比如一个艺术园区如田子坊，则是艺术家吸引艺术家的。&lt;/div&gt;
+&lt;div class="line"&gt;增长的过程就是如此奇妙，高祖有曰，星星之火，可以燎原。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle section" id="id2"&gt;
+&lt;h1&gt;信息匹配产生的交换&lt;a class="headerlink" href="#id2" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;商业无非就是人与人之间的交换。&lt;/div&gt;
+&lt;div class="line"&gt;基因交换是婚姻，物质交换是买卖，权钱交易是贿赂。&lt;/div&gt;
+&lt;div class="line"&gt;而交换的媒介则是各大厂必争之地。谁作了一个好媒人，谁就可以成为平台。&lt;/div&gt;
+&lt;div class="line"&gt;做得好的如 朋友圈广告，天猫，Google 搜索引擎无不如此。&lt;/div&gt;
+&lt;div class="line"&gt;也有正在往这方面发展的如知乎，陌陌。&lt;/div&gt;
+&lt;div class="line"&gt;在程序员这行，Github、Stackoverflow 就是这样的平台，不过还不明显。&lt;/div&gt;
+&lt;div class="line"&gt;不管如何，你从拥有 QQ 号开始，你的简历就已经被互联网记下了。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-last section" id="id3"&gt;
+&lt;h1&gt;互联网的遗产&lt;a class="headerlink" href="#id3" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;一个人的言语决定了他的行为，他的行为决定了他的思想，他的思想决定了他成为什么样的人。&lt;/div&gt;
+&lt;div class="line"&gt;在互联网，则是你用的 App 决定了你是个什么样的人。&lt;/div&gt;
+&lt;div class="line"&gt;然而可怕的是，一个人最常用的 App 只有 10 个。&lt;/div&gt;
+&lt;div class="line"&gt;明星用 Ins 和 Twitter 散播影响力，&lt;/div&gt;
+&lt;div class="line"&gt;更可怕的是，这些 App 产生的东西不是你的。&lt;/div&gt;
+&lt;div class="line"&gt;也就是说，当你死了，你的人生就像伏地魔的魂器一样散落各地，而且很快就会被人遗忘，被搜索引擎遗忘。&lt;/div&gt;
+&lt;div class="line"&gt;你只能祈祷，你的遗产将成为互联网思想的一个神经元。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;推广&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight-default"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;俺最近想做一个 Github 挖人机的项目。
+诚意招各路英雄好汉：
+- Python 爬虫工程师
+- Java 工程师
+- React 前端工程师
+- Matlab 机器学习工程师
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;:-)&lt;/p&gt;
+&lt;p class="feed-meta"&gt;Published by &lt;em class="feed-author"&gt;Taoge&lt;/em&gt; on &lt;em class="feed-date"&gt;2017-09-07&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      <guid>http://blog.heytaoge.com/thoughts/find_job_by_github.html</guid>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>别说话，让我静静地玩会手机</title>
+      <link>http://blog.heytaoge.com/thoughts/why_we_communicate.html</link>
+      <description>&lt;div class="compound"&gt;
+&lt;blockquote class="compound-first"&gt;
+&lt;div&gt;&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field-odd field"&gt;&lt;th class="field-name"&gt;keywords:&lt;/th&gt;&lt;td class="field-body"&gt;信息交流, 信息传播, 信息熵&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;div class="compound-middle section" id="id2"&gt;
+&lt;h1&gt;一个女人等于一千只鸭子？&lt;a class="headerlink" href="#id2" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;作为公司美食部长，经常大家一起出去吃饭，俺发现了一个有意思的现象，
+一群程序员落座后，尬聊一两分钟，就开始各自看自己的手机了。
+而附近有女生在的餐桌上，则叽叽喳喳，这时候，某说，“一个女人等于一千只鸭子。”&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle section" id="id3"&gt;
+&lt;h1&gt;为什么需要交流？&lt;a class="headerlink" href="#id3" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;当然是为了信息传递，更数学一点的说，是为了减少不确定性。［也就是熵减的过程。
+什么是熵？参见 香农 ］
+我们怎么描述一条信息的信息量呢？&lt;/p&gt;
+&lt;p&gt;举个例子，有人告你说，明天太阳照常升起。和有人告你说，隔壁的王某把你绿了。
+两件事信息量是完全不同的。
+前者减少的不确定性几乎没有，因为你本来就知道太阳每天升起。
+而后者的信息量则非常大了。&lt;/p&gt;
+&lt;p&gt;我们为了减少不确定性，时时刻刻都在获取信息。
+然而，信息传播也是有渠道的。
+按照省力法则，人会选择最便捷的渠道去获取信息。
+在活字印刷发明前，信息传播是件昂贵的事情，所以人们主要通过聊天获得信息。
+这就是为什么一个穷乡僻壤的地方，长舌妇可能比较多的原因吧。
+而现在互联网将获取信息的成本，几乎降为零。
+既然信息获取成本为零，又何必多费口舌呢？&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle section" id="id4"&gt;
+&lt;h1&gt;为什么这件事她先知道？&lt;a class="headerlink" href="#id4" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;然而具体来说，信息又是怎么传播的呢？
+如果我们把信息想象成水流一样，就可以很容易想通这个事情。
+水总是朝梯度最大的方向流动，信息也是这样的。
+（什么？信息也是有梯度的？你咋老说些俺不懂的呢？）&lt;/p&gt;
+&lt;p&gt;举个例子，啥是信息梯度呢？就是信息流向总是往最密切关心的人的手里。
+比如台风来了，渔民比农民更早知道这条信息。
+又比如，吴青峰等明星去哪了，粉丝比路人更清楚。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="compound-last section" id="id5"&gt;
+&lt;h1&gt;八卦&lt;a class="headerlink" href="#id5" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;说到这里，大家都知道信息交流的特征，是时候，谈到最后一个话题了。
+八卦。
+啥是八卦？不限于 “谁谁谁和谁谁啥啥啥了” 之类的事情，最八卦的人在信息中心，次八卦的人在稍外层。
+他们之间有个信息差。
+比如，我是美食群主，附近有啥好吃的了解的最多，那么自然形成一个饭圈。
+有心的人，可以观察下身边人哪个最八卦？了解下她是如何获取这些信息的。&lt;/p&gt;
+&lt;p&gt;八卦的作用在人类史上的作用巨大，据说人类早期八卦能力比较强的女人是氏族领导者。
+因为八卦能维持一个部落的团结，八卦让群体获取了身份认同感，从而能够很好的写作。&lt;/p&gt;
+&lt;p&gt;然而八卦群也是有上限的，比如一个微信群超过100人，那群成员之间是不会有啥有意思的交流的。
+社会学家发现八卦的信息传播能力一般在 3 ～ 72 人。&lt;/p&gt;
+&lt;p&gt;聪明的同学想得更透彻一点，就会发现宗教的作用了。&lt;/p&gt;
+&lt;p class="feed-meta"&gt;Published by &lt;em class="feed-author"&gt;Taoge&lt;/em&gt; on &lt;em class="feed-date"&gt;2017-09-06&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      <guid>http://blog.heytaoge.com/thoughts/why_we_communicate.html</guid>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>K8S 是 Google 的礼物吗？</title>
       <link>http://blog.heytaoge.com/thoughts/is_k8s_the_google_gift.html</link>
@@ -255,7 +384,15 @@ Airtable 正是一个像 Excel 的服务，但又足够简单易用，并且 App
       <title>Hadoop 2.8.0 半自动化安装</title>
       <link>http://blog.heytaoge.com/hadoop/hadoop_install.html</link>
       <description>&lt;div class="compound"&gt;
-&lt;div class="compound-first section" id="id1"&gt;
+&lt;table class="compound-first docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field-odd field"&gt;&lt;th class="field-name"&gt;keywords:&lt;/th&gt;&lt;td class="field-body"&gt;hadoop 安装, hadoop 入门, hadoop 准备&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="compound-middle section" id="id1"&gt;
 &lt;h1&gt;1, 虚拟机准备&lt;a class="headerlink" href="#id1" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;俺使用 VirtualBox 创建了 3 台虚拟机，分别叫 &lt;cite&gt;ubuntu-1&lt;/cite&gt;, &lt;cite&gt;ubuntu-2&lt;/cite&gt;, &lt;cite&gt;ubuntu-3&lt;/cite&gt; 。&lt;/div&gt;
