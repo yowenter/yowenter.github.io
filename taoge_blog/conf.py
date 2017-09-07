@@ -100,10 +100,10 @@ todo_include_todos = False
 html_theme_options = {
     'description':"Taoge's thoughts about programming, life and everything",
 
-    "github_user":"yowenter",
-    "github_repo":"yowenter.github.io",
-    "github_type":"follow",
-    "github_count":False,
+    # "github_user":"yowenter",
+    # "github_repo":"yowenter.github.io",
+    # "github_type":"follow",
+    # "github_count":False,
     "font_family":None
 
 
