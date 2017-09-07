@@ -54,7 +54,7 @@ source_parsers = {
 master_doc = 'index'
 
 # General information about the project.
-project = u'Curiosity'
+project = u'Y f = f (Y f)'
 copyright = u'2017, Taoge'
 author = u'Taoge'
 
@@ -98,8 +98,6 @@ todo_include_todos = False
 # documentation.
 #
 html_theme_options = {
-    'logo': 'logo.png',
-    'logo_name':"Taoge's Blog",
     'description':"Taoge's thoughts about programming, life and everything",
 
     "github_user":"yowenter",
