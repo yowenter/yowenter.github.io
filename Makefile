@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -E -v -P
+SPHINXOPTS    = -b Ohtml -E -v -P
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = taoge_blog
 SOURCEDIR     = taoge_blog

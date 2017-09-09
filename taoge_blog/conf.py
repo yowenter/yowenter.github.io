@@ -20,12 +20,18 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'exts'))
+
 import alabaster
 
-html_theme_path = [alabaster.get_path()]
-extensions = ['alabaster']
-html_theme = 'alabaster'
+from exts import optimize_html_builder
 
+html_theme_path = [alabaster.get_path()]
+html_theme = 'alabaster'
 
 # -- General configuration ------------------------------------------------
 
@@ -36,7 +42,7 @@ html_theme = 'alabaster'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinxcontrib.newsfeed']
+extensions = ['alabaster', 'sphinxcontrib.newsfeed', 'optimize_html_builder']
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -46,7 +52,7 @@ templates_path = ['_templates']
 source_suffix = ['.rst', '.md']
 
 source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
+    '.md': 'recommonmark.parser.CommonMarkParser',
 }
 # source_suffix = '.rst'
 
@@ -85,7 +91,6 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
-
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -98,16 +103,13 @@ todo_include_todos = False
 # documentation.
 #
 html_theme_options = {
-    'description':"Taoge's thoughts about programming, life and everything",
+    'description': "Taoge's thoughts about programming, life and everything",
 
     # "github_user":"yowenter",
     # "github_repo":"yowenter.github.io",
     # "github_type":"follow",
     # "github_count":False,
-    "font_family":None
-
-
-
+    "font_family": None
 
 }
 
@@ -125,13 +127,11 @@ html_sidebars = {
 html_static_path = ['_static']
 html_favicon = "favicon.ico"
 
-
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Curiositydoc'
 html_title = "Taoge"
-
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -161,7 +161,6 @@ latex_documents = [
      u'Taoge', 'manual'),
 ]
 
-
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
@@ -170,7 +169,6 @@ man_pages = [
     (master_doc, 'curiosity', u'Curiosity Documentation',
      [author], 1)
 ]
-
 
 # -- Options for Texinfo output -------------------------------------------
 
@@ -182,6 +180,3 @@ texinfo_documents = [
      author, 'Curiosity', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
