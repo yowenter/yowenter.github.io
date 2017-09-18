@@ -130,8 +130,7 @@ html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Curiositydoc'
-html_title = None
-
+html_title = ""
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {

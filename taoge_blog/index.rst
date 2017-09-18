@@ -11,6 +11,8 @@ y.o O
 .. toctree::
    :glob:
    
+
+   economics/a_programmer_economic_sense_1
    thoughts/find_job_by_github
    thoughts/why_we_communicate
    thoughts/is_k8s_the_google_gift
