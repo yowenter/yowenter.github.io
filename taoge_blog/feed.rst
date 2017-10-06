@@ -14,6 +14,7 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   my_projects/imuseum
    economics/a_programmer_economic_sense_1
    thoughts/find_job_by_github
    thoughts/why_we_communicate
