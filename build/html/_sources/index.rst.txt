@@ -12,6 +12,7 @@ y.o O
    :glob:
    
    
+   thoughts/how_to_solve_problem
    my_projects/imuseum
    economics/a_programmer_economic_sense_1
    thoughts/find_job_by_github

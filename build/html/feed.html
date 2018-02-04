@@ -5,7 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content="每个程序员都该有的经济学常识" name="description" />
+    <meta content="如何解决问题" name="description" />
+<meta content="分治法, 复杂性" name="keywords" />
+<meta content="每个程序员都该有的经济学常识" name="description" />
 <meta content="程序员, 经济学常识, 软件设计的权衡" name="keywords" />
 <meta content="github 招聘, github 挖人, github 求职, github 简历, 平台商业模式" name="keywords" />
 <meta content="信息交流, 信息传播, 信息熵" name="keywords" />
@@ -87,6 +89,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h1>订阅 Rss<a class="headerlink" href="#rss" title="Permalink to this headline">¶</a></h1>
 <p>这是我的 RSS Feed，你可以订阅 <a class="reference external" href="http://blog.heytaoge.com">http://blog.heytaoge.com</a> 。</p>
 <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="id1">
+<h2><a class="feed-ref reference internal" href="thoughts/how_to_solve_problem.html#id1">如何解决问题</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>程序注定会有 Bug，人生终有不如意。 - TAOG 语</p>
+<div class="section" id="id2">
+<h3>真正的问题是什么<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>在解决问题之前， 我们需要明白什么是真正的问题。 当我们说一个东西有问题的时候，则暗示了我们的期望值与实际值有出入。</p>
+<p>比如说，当有人抱怨说，“你这个页面有点卡”的时候，
+我会问，“你期望这个页面多久加载出来 ？100 ms ？200 ms ？1000 ms ？通常来说， 页面在 1-3秒内出来是符合大多数人期望的，再快的话，用户也感觉不出来。 ”</p>
+</div>
+<div class="section" id="id3">
+<h3>是谁的问题<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>很多时候，我们会认为问题是别人的，应当有人来解决一下。但别人可能不会觉得有什么问题。</p>
+<p>比如说， 当学生抱怨学校停车位不够的时候， 他可能期望校长或者有关部门能管一管了。
+但事实上，校长有专有的司机和停车位， 根本感受不到这个问题。
+大多时候，我们觉得痛苦，只是错误的认为问题多么显而易见，并且认为这个问题应当有人管一管了。
+如果这时候学生偷偷的扎爆了校长车子的轮胎时，校长可能会意识到问题了。但更大的可能是，校长开除了这个学生。
+问题仍然没有解决。</p>
+<p>又比如说， 同事有严重的口臭或者脚臭或者其他什么气味， 你已经快要窒息的时候，认为这个问题必须立刻马上解决。
+但他可能丝毫意识不到这是个问题。
+这时候，沟通是良药。</p>
+<p>但大多数时候，人们只会逃避，或者羞于表达，问题没有被解决。</p>
+<p>所以呢，如果解决不了问题，那就解决产生问题的人吧。</p>
+</div>
+<div class="section" id="id4">
+<h3>如何找到问题的根源<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>问题经常带着面具，以致于人们发现不了问题的根源，
+大多时候，我们只不过是头痛医头，脚痛医脚的庸医罢了。</p>
+<p>举个例子，你运营的一个线上产品不能访问了。
+你开始观察，你发现 CPU 升高了，内存也满了，内核又出现了千千万万的错误日志。</p>
+<p>你会认为 CPU 不够，加 CPU。 内存不够，加内存。但问题没有解决。
+你开始慌乱，随便看到一条内核错误日志就开始 Google，并认为内核的日志的信息就是问题根源。</p>
+<p>但，聪明的。 这上面都是一系列现象呐，就像体温升高一样，不能把人放冰箱哎。</p>
+<p>所以当问题出现时，不要迷失于现象，先问自己几个问题：</p>
+<ul class="simple">
+<li>这个问题是第一次出现吗？</li>
+<li>这个问题出现在什么时候？ 在出现之前，是否有变更？</li>
+<li>这个问题在哪出现的？</li>
+</ul>
+<p>通过上述问题， 我们在尝试把问题和时空解耦分析，如果一个问题和时间先后无关，那很有可能空间有关。</p>
+<p>上面这个问题的根源，很有可能就是昨天晚上你上线了一个 BUG 导致的（时间）。
+也有可能是这台机器有故障，更换机器（空间）就解决了。</p>
+</div>
+<div class="section" id="id5">
+<h3>如何解决它<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>如果明确知道问题是什么，找到了问题的根源，大多数问题是能迅速被知道是否可以解决的。
+对于解决不了的，我们可以避免它。</p>
+<p>或者说，让制造问题的人感受到和你一样的痛苦，这样他也会尝试去解决的。
+更多的时候，人们选择了一种更为轻松的方法， 甩锅给其他人。</p>
+</div>
+<div class="section" id="id6">
+<h3>参考<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>&lt;你的灯亮着吗&gt;</li>
+<li>&lt;Mastering Complexity&gt;</li>
+</ul>
+<p class="feed-meta">Published by <em class="feed-author">Taoge</em> on <em class="feed-date">2018-02-04</em></p>
+</div>
 </div>
 <div class="section" id="imuseum">
 <h2><a class="feed-ref reference internal" href="my_projects/imuseum.html#imuseum">我的博物馆 IMuseum</a><a class="headerlink" href="#imuseum" title="Permalink to this headline">¶</a></h2>
@@ -945,6 +1005,7 @@ intercom 使用 segment 将用户分类，
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="thoughts/how_to_solve_problem.html">如何解决问题</a></li>
 <li class="toctree-l1"><a class="reference internal" href="my_projects/imuseum.html">我的博物馆 IMuseum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="economics/a_programmer_economic_sense_1.html">程序员不懂的经济学 (1)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thoughts/find_job_by_github.html">Github 挖人机</a></li>
@@ -964,6 +1025,7 @@ intercom 使用 segment 将用户分类，
 <li class="toctree-l1"><a class="reference internal" href="manage/time_manage.html">3 分钟学会时间管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_platform.html">未收录文章</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">订阅 Rss</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="thoughts/how_to_solve_problem.html">如何解决问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="my_projects/imuseum.html">我的博物馆 IMuseum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="economics/a_programmer_economic_sense_1.html">程序员不懂的经济学 (1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="thoughts/find_job_by_github.html">Github 挖人机</a></li>
