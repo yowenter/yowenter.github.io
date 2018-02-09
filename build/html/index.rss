@@ -4,8 +4,68 @@
     <title>Taoge's Thoughts</title>
     <link>http://blog.heytaoge.com/</link>
     <description>所见，所闻，所思</description>
-    <lastBuildDate>Sun, 04 Feb 2018 14:42:29 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Feb 2018 14:51:24 GMT</lastBuildDate>
     <generator>sphinxcontrib-newsfeed</generator>
+    <item>
+      <title>谈管理</title>
+      <link>http://blog.heytaoge.com/manage/how_to_help_employee.html</link>
+      <description>&lt;div class="compound"&gt;
+&lt;p class="compound-first"&gt;最近有感而发。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;管理就像游泳，关于它的理论有很多，然而，溺水者时而有之。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;功利者认为，管理是为了达成目标的手段。
+政治家认为，管理是踢皮球的技巧。
+理想者认为，管理是为了改变世界。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;我认为，管理是一群人的舞蹈。
+叫我说人话， 我认为管理是双工的通信，一方面帮助管理者达成目标，而另一方面是帮助员工成功。
+所以呢，这还是挺难的一件事儿。
+因为这事很难，所以多数时候，管理更像是一门可远观不可近看的艺术了。&lt;/p&gt;
+&lt;p class="compound-middle"&gt;作为一个程序员， 就写 Bug 的经验，可以得出几条管理的经验。&lt;/p&gt;
+&lt;div class="compound-middle section" id="id2"&gt;
+&lt;h1&gt;上德无德，是以有德&lt;a class="headerlink" href="#id2" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;这话是老子说的，意思就是说，老板不应该 “管” ，才能成为一个会管理的人。&lt;/div&gt;
+&lt;div class="line"&gt;“诶？ 您这不是自相矛盾吗？”&lt;/div&gt;
+&lt;div class="line"&gt;“非也，且听我细细道来。”&lt;/div&gt;
+&lt;div class="line"&gt;这句话其实说的是， 老板要信任员工， 既然把事情交给一个人，那么就应该相信他能做好。&lt;/div&gt;
+&lt;div class="line"&gt;当然，委托的时候，双方要充分沟通，心中有数。老板确认员工能干好， 员工知道事情的风险和目标。&lt;/div&gt;
+&lt;div class="line"&gt;如果没有沟通好，那么就可能出现， 老板不得不时刻关心事情的进度，员工处于被动状态，凡事都要老板亲力亲为。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-middle section" id="id3"&gt;
+&lt;h1&gt;帮助员工成功&lt;a class="headerlink" href="#id3" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;员工与企业是互相筛选的。&lt;/div&gt;
+&lt;div class="line"&gt;如果企业没有帮助员工成功，而是仅仅将员工作为一项成本来看待，忽略了员工的自身诉求。&lt;/div&gt;
+&lt;div class="line"&gt;那么，企业也许能留住工人，但留不住人才。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="compound-last section" id="id4"&gt;
+&lt;h1&gt;如之奈何&lt;a class="headerlink" href="#id4" title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;信任与帮助员工成功，是一种理念。但具体落实又当如何呢？
+我认为，只需要做两件事，观察和引导。&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;观察的方式有很多种， 比如随时与员工聊一聊，即使简单的一句，“最近你觉得工作有没有挑战性？”，也能得到很多信息。&lt;/div&gt;
+&lt;div class="line"&gt;不管是太难还是太简单，太有压力还是没有压力，这些都是可以得到的。&lt;/div&gt;
+&lt;div class="line"&gt;如果几次一个人的回答都是，“最近总是修 Bug，没什么挑战”，那么很有可能员工已经陷入压抑的反馈循环。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;除了观察员工，还需要观察自己。很多时候，管理者可能会把不好的心情溢于言表，从而传递给员工。有的管理者自认为伪装的很好，其实大家看在眼里。&lt;/div&gt;
+&lt;div class="line"&gt;甚至，有的时候随便 judge 员工的一句话，说者无意，听者有心，都会让员工感到工作的毫无希望。&lt;/div&gt;
+&lt;div class="line"&gt;当然，还有些不当的举止，比如醉酒，对某些亲近的员工，感觉是哥俩好啊、感情深的体现。但对没和老板醉过酒的同事来说，就可能有点难以接受。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;另一件事，是引导。一个老板引导得好的标准是，自己一个月不上班，对项目没有任何影响。&lt;/div&gt;
+&lt;div class="line"&gt;如果缺乏引导， 团队很快会变成离散的分子运动。安排工作也会像树状结构一样。而同时，员工又缺乏一定的方法论导致困难重重。&lt;/div&gt;
+&lt;div class="line"&gt;最后的结果是， 老板以为自己给了员工一个挑战，其实是给了员工一块石头。&lt;/div&gt;
+&lt;div class="line"&gt;我总是想起周星驰的一部电影， “每个人心中都有一把火”。 引导就是点燃这把火，可还真是一门艺术！&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="feed-meta"&gt;Published by &lt;em class="feed-author"&gt;Taoge&lt;/em&gt; on &lt;em class="feed-date"&gt;2018-02-09&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      <guid>http://blog.heytaoge.com/manage/how_to_help_employee.html</guid>
+      <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>如何解决问题</title>
       <link>http://blog.heytaoge.com/thoughts/how_to_solve_problem.html</link>

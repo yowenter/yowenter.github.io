@@ -11,7 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
-   
+   manage/how_to_help_employee
    thoughts/how_to_solve_problem
    my_projects/imuseum
    economics/a_programmer_economic_sense_1
