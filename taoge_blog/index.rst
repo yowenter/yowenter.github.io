@@ -11,6 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
+   thoughts/the_flow_of_information
    manage/how_to_help_employee
    thoughts/how_to_solve_problem
    my_projects/imuseum
