@@ -103,7 +103,7 @@ todo_include_todos = False
 # documentation.
 #
 html_theme_options = {
-    'description': "Taoge's thoughts about programming, life and everything",
+    'description': u"Taoge 胡思乱想的地方。\nhttps://github.com/yowenter",
 
     # "github_user":"yowenter",
     # "github_repo":"yowenter.github.io",

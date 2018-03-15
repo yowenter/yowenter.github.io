@@ -28,28 +28,24 @@
 
 我的喜好
 
-	| 喜欢吃鱼，包括但不限于：红烧鱼，酸菜鱼，水煮鱼，烤鱼。
-	| 喜欢游泳，8岁下河捕鱼，13岁河边钓虾，21岁进沪与河水绝缘。
-	| 喜欢纪录片，BBC
-	| 喜欢 《塞尔达传说 - 荒野之息》
+	| 喜欢的作家，阿西莫夫。
+	| 喜欢的运动， 游泳。
+	| 喜欢的游戏，《塞尔达传说 - 荒野之息》
+	| 喜欢的书，https://book.douban.com/people/airywenter/collect
 
 
 
-我的技能
+我的特技
 
-	| 插科打诨于前端，后端，产品工程师之间。
-	| 在现实中分层抽象，在 Bug 的坟头上蹦迪。
-	| 常于Github 海岸边拾捡贝壳，沾沾自喜。
+	| 聚众吹得了牛逼，孤独时乐于学习。
+	| 从现实中抽象，在 Bug 的坟头上蹦迪。
+	| 常于海岸拾捡贝壳，沾沾自喜。
 
-
-我爱读的书
-
-	| 豆瓣读书 https://book.douban.com/people/airywenter/
 
 
 我的项目
 
-	| 吃遍全世界 https://keepeat.github.io/eatoverworld/
+	|  Github https://github.com/yowenter
 
 
 
