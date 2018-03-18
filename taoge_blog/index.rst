@@ -11,6 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
+   thoughts/trade_off_and_chose
    thoughts/the_flow_of_information
    manage/how_to_help_employee
    thoughts/how_to_solve_problem
