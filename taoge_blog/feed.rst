@@ -14,6 +14,7 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   programming/understanding_program
    thoughts/trade_off_and_chose
    thoughts/the_flow_of_information
    manage/how_to_help_employee
