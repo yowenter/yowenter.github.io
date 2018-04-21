@@ -14,6 +14,8 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+
+   thoughts/xunwu_survey_method
    programming/understanding_program
    thoughts/trade_off_and_chose
    thoughts/the_flow_of_information
