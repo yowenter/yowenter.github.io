@@ -25,14 +25,11 @@
 
 
 
-
 我的喜好
 
 	| 喜欢的作家，阿西莫夫。
 	| 喜欢的运动， 游泳。
 	| 喜欢的游戏，《塞尔达传说 - 荒野之息》
-	| 喜欢的书，https://book.douban.com/people/airywenter/collect
-
 
 
 我的特技
@@ -43,9 +40,6 @@
 
 
 
-我的项目
-
-	|  Github https://github.com/yowenter
 
 
 
