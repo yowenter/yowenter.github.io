@@ -11,6 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
+   thoughts/how_to_find_memory
    thoughts/xunwu_survey_method
    programming/understanding_program
    thoughts/trade_off_and_chose
