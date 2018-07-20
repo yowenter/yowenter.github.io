@@ -3,4 +3,5 @@ venv
 dist
 taoge_blog.egg-info
 .idea
-
+.vscode
+build/lib
