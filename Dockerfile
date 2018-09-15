@@ -5,7 +5,7 @@ MAINTAINER Taoge <wenter.wu@daocloud.io>
 RUN apt-get update \
     && apt-get install -y software-properties-common \
     # && apt-get install -y python-pip \
-    && pip install pip --upgrade \
+    # && pip install pip --upgrade \
     && apt-add-repository -y ppa:nginx/stable \
     && apt-get update \
     && apt-get install -y nginx
