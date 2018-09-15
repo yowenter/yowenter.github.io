@@ -11,6 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
+   thoughts/how_skateboard_feel
    thoughts/why_serverless_is_the_future
    thoughts/how_to_find_memory
    thoughts/xunwu_survey_method

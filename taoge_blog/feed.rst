@@ -14,7 +14,7 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
-
+   thoughts/how_skateboard_feel
    thoughts/why_serverless_is_the_future
    thoughts/how_to_find_memory
    thoughts/xunwu_survey_method
