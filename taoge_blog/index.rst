@@ -11,6 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
+   travel/bali_island
    thoughts/how_skateboard_feel
    thoughts/why_serverless_is_the_future
    thoughts/how_to_find_memory
@@ -26,7 +27,7 @@ y.o O
    thoughts/why_we_communicate
    thoughts/is_k8s_the_google_gift
    thoughts/knowledge_base
-   travel/*
+   travel/koland
    ml/*
    thoughts/information_management
    hadoop_intro
