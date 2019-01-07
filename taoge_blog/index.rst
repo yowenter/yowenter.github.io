@@ -11,6 +11,7 @@ y.o O
 .. toctree::
    :glob:
    
+   journal/2018_review
    travel/bali_island
    thoughts/how_skateboard_feel
    thoughts/why_serverless_is_the_future
