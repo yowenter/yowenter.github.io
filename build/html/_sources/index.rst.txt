@@ -10,6 +10,7 @@ y.o O
 
 .. toctree::
    :glob:
+   :titlesonly:
    
    journal/2018_review
    travel/bali_island

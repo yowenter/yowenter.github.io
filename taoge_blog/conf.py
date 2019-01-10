@@ -103,7 +103,7 @@ todo_include_todos = False
 # documentation.
 #
 html_theme_options = {
-    'description': u"Taoge 胡思乱想的地方。\nhttps://github.com/yowenter",
+    'description': u"Taoge 胡思乱想的地方。",
 
     # "github_user":"yowenter",
     # "github_repo":"yowenter.github.io",
@@ -116,7 +116,7 @@ html_theme_options = {
 html_sidebars = {
     '**': [
         'about.html',
-        'navigation.html'
+        # 'navigation.html'
     ]
 }
 
