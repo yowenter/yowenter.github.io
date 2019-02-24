@@ -5,7 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content="开源软件的博弈" name="description" />
+    <meta content="构建消息流服务" name="description" />
+<meta content="notification feed, 消息流" name="keywords" />
+<meta content="开源软件的博弈" name="description" />
 <meta content="开源生态, kubernetes, 博弈" name="keywords" />
 <meta content="巴厘岛游记" name="description" />
 <meta content="巴厘岛, 游记, 冲浪, kuta beach" name="keywords" />
@@ -101,6 +103,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h1>订阅 Rss<a class="headerlink" href="#rss" title="Permalink to this headline">¶</a></h1>
 <p>这是我的 RSS Feed，你可以订阅 <a class="reference external" href="http://blog.heytaoge.com">http://blog.heytaoge.com</a> 。</p>
 <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="id1">
+<h2><a class="feed-ref reference internal" href="my_projects/build_your_own_notification_feed.html#id1">构建自己的消息流</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>啥是消息流？<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>最常见的如朋友圈，或者 Twitter 等，所有社交属性的应用都有这么一个消息流，只不过名字不同而已。</p>
+</div>
+<div class="section" id="id3">
+<h3>为啥要自建一个消息流？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">现有的通知在及时性和隐私性上有所欠缺，</div>
+<div class="line">比如海淘后千遍万遍的刷包裹物流信息，</div>
+<div class="line">比如让人心动的机票价格，</div>
+<div class="line">比如偷偷关注女神的SNS【又不想表现自己视奸的行为】</div>
+</div>
+<div class="line-block">
+<div class="line">同时现有的通知存在过于分散的现象，</div>
+<div class="line">比如一个人有 10 条动态，不应该收到 10 条通知，而是只收到一条通知。</div>
+<div class="line">多个社交 App 的通知需要打开多个 App。</div>
+</div>
+<div class="line-block">
+<div class="line">In fact， 最适合做消息聚合的人应该是操作系统，比如 Google Assistant 或愚蠢的 Siri。</div>
+<div class="line">但每个 App 产生的信息孤岛也许是互联网原住民最后的一块遮羞布了。</div>
+<div class="line">所以，自己动手，丰衣足食。</div>
+</div>
+</div>
+<div class="section" id="huh-a-weekend-project">
+<h3>Huh, A Weekend Project<a class="headerlink" href="#huh-a-weekend-project" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">于是俺周末自己撸了一个消息流服务: <a class="reference external" href="https://github.com/yowenter/NotificationFeed">https://github.com/yowenter/NotificationFeed</a>  【说出来可能不信，我可不是来骗 star 的】</div>
+<div class="line">这个消息流服务实现了 监听 github 项目 issue 的变化，自动发送邮件的功能。</div>
+<div class="line">后续的的想法是集成更多的消息类型，同时做更优雅的聚合。</div>
+<div class="line">接着会写个比较简单的 UI，也就是做一个 All In One 的 Timeline 应用了。</div>
+<div class="line">后续的可能 Maybe 可以自动处理通知，比如说量化交易，but 我觉得这个可以接上 IFTTT 服务。</div>
+<div class="line">这个项目对于想学 Python 的朋友也很简单很容易入门了，欢迎做一些微小的贡献，Typo 也欢迎。</div>
+</div>
+<p class="feed-meta">Published by <em class="feed-author">写代码的 TAOGOOOO</em> on <em class="feed-date">2019-02-24</em></p>
+</div>
 </div>
 <div class="section" id="kubernetes">
 <h2><a class="feed-ref reference internal" href="economics/why_open_source_works.html#kubernetes">谈开源软件的商业博弈，以 kubernetes 为例</a><a class="headerlink" href="#kubernetes" title="Permalink to this headline">¶</a></h2>

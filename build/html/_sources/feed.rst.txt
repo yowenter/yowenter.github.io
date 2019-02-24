@@ -14,6 +14,7 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   my_projects/build_your_own_notification_feed
    economics/why_open_source_works
    journal/2018_review
    travel/bali_island

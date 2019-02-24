@@ -12,6 +12,7 @@ y.o O
    :glob:
    :titlesonly:
    
+   my_projects/build_your_own_notification_feed
    economics/why_open_source_works
    journal/2018_review
    travel/bali_island
