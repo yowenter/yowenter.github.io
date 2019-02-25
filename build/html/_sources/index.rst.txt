@@ -12,6 +12,7 @@ y.o O
    :glob:
    :titlesonly:
    
+   economics/how_economics_works_a_programmer_view
    my_projects/build_your_own_notification_feed
    economics/why_open_source_works
    journal/2018_review
