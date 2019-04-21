@@ -95,7 +95,7 @@ Of Course, 你肯定每天都产生100个奇怪的想法（如果你996加班的
           
 ## 参考          
           
-- [Feedly](feedly.com/i/my)          
+- [Feedly](https://feedly.com/i/my)          
 - [Information Retrieval in Practice](https://book.douban.com/subject/4861766/  )   
 - [EverNote](https://evernote.com/)     
           

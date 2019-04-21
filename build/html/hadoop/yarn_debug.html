@@ -4,23 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>入门最后一站: OSX 搭建 Hadoop 开发环境</title>
-    
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     'v1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="百倍程序员的杠杆率和加速度" href="../thoughts/100_times_effective_programmer.html" />
@@ -64,13 +57,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 	
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="osx-hadoop">
@@ -121,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="line">这是它的第一个错误 :</div>
 </div>
 <p><strong>Error_01</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">.</span>
 <span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">Please</span> <span class="n">initialize</span> <span class="n">the</span> <span class="n">log4j</span> <span class="n">system</span> <span class="n">properly</span><span class="o">.</span>
 <span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">See</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">logging</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">log4j</span><span class="o">/</span><span class="mf">1.2</span><span class="o">/</span><span class="n">faq</span><span class="o">.</span><span class="n">html</span><span class="c1">#noconfig for more info</span>
 </pre></div>
@@ -133,7 +127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="line">于是我在项目添加了一个 <cite>log4j.properties</cite> 文件，调成 DEBUG 模式，只能期望看日志不会对着消防水管吃水。</div>
 </div>
 <p><strong>Error_02</strong></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>17/05/11 22:22:16 DEBUG learn_hadoop.App:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>17/05/11 22:22:16 DEBUG learn_hadoop.App:
 17/05/11 22:22:16 DEBUG security.UserGroupInformation: PrivilegedAction as:wenter (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.connect(Job.java:1306)
 17/05/11 22:23:13 INFO mapreduce.Cluster: java.util.ServiceLoader[org.apache.hadoop.mapreduce.protocol.ClientProtocolProvider]
 17/05/11 22:25:12 INFO mapreduce.Cluster: org.apache.hadoop.mapred.LocalClientProtocolProvider@e041f0c
@@ -187,7 +181,7 @@ Exception in thread &quot;main&quot; java.io.IOException: Cannot initialize Clus
 <div class="line">最后，我在 maven 的包管理 文件 pom.xml 里增加了 一个依赖:</div>
 </div>
 <p><strong>Hadoop MapReduce Client</strong>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-jobclient --&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-jobclient --&gt;
 &lt;dependency&gt;
         &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
         &lt;artifactId&gt;hadoop-mapreduce-client-jobclient&lt;/artifactId&gt;
@@ -222,6 +216,7 @@ Exception in thread &quot;main&quot; java.io.IOException: Cannot initialize Clus
 
 
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -246,8 +241,8 @@ Exception in thread &quot;main&quot; java.io.IOException: Cannot initialize Clus
       &copy;2018, Taoge.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
       <a href="../_sources/hadoop/yarn_debug.rst.txt"

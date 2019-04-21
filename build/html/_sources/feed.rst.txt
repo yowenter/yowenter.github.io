@@ -14,6 +14,7 @@
    :description: 所见，所闻，所思
    :link: http://blog.heytaoge.com/
 
+   wechat_subscribe
    thoughts/my_friends_at_dao_2
    thoughts/my_friends_at_dao
    economics/how_economics_works_a_programmer_view
