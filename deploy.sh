@@ -52,11 +52,12 @@ git add -A .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
-ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
-ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
-ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
-ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $encrypted_f16ead06690a_key -iv $encrypted_f16ead06690a_iv -in ../deploy_key.enc -out ../deploy_key -d
+# ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+# ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+# ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+# ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+
+openssl enc -aes-256-cbc -nosalt -e -in ../deploy_key.enc -out ../deploy_key -K $ENCRYPTED_KEY -iv  $ENCRYPTED_IV
 chmod 600 ../deploy_key
 eval `ssh-agent -s`
 ssh-add ../deploy_key
