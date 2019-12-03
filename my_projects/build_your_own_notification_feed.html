@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta content="构建消息流服务" name="description" />
+<meta content="notification feed, 消息流" name="keywords" />
+
+    <title>构建自己的消息流</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="谈开源软件的商业博弈，以 kubernetes 为例" href="../economics/why_open_source_works.html" />
+    <link rel="prev" title="程序员和纺织工有啥区别？" href="../economics/how_economics_works_a_programmer_view.html" />
+<meta name="viewport" content="width=device-width"></meta>
+	<link rel="alternate"
+		type="application/rss+xml"
+		title="Taoge Blog"
+		href="/index.rss" />
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-69141957-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KVT8TRH');</script>
+<!-- End Google Tag Manager -->
+
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9422289764825717",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVT8TRH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+	
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>构建自己的消息流<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>啥是消息流？<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>最常见的如朋友圈，或者 Twitter 等，所有社交属性的应用都有这么一个消息流，只不过名字不同而已。</p>
+</div>
+<div class="section" id="id3">
+<h2>为啥要自建一个消息流？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">现有的通知在及时性和隐私性上有所欠缺，</div>
+<div class="line">比如海淘后千遍万遍的刷包裹物流信息，</div>
+<div class="line">比如让人心动的机票价格，</div>
+<div class="line">比如偷偷关注女神的SNS【又不想表现自己视奸的行为】</div>
+</div>
+<div class="line-block">
+<div class="line">同时现有的通知存在过于分散的现象，</div>
+<div class="line">比如一个人有 10 条动态，不应该收到 10 条通知，而是只收到一条通知。</div>
+<div class="line">多个社交 App 的通知需要打开多个 App。</div>
+</div>
+<div class="line-block">
+<div class="line">In fact， 最适合做消息聚合的人应该是操作系统，比如 Google Assistant 或愚蠢的 Siri。</div>
+<div class="line">但每个 App 产生的信息孤岛也许是互联网原住民最后的一块遮羞布了。</div>
+<div class="line">所以，自己动手，丰衣足食。</div>
+</div>
+</div>
+<div class="section" id="huh-a-weekend-project">
+<h2>Huh, A Weekend Project<a class="headerlink" href="#huh-a-weekend-project" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">于是俺周末自己撸了一个消息流服务: <a class="reference external" href="https://github.com/yowenter/NotificationFeed">https://github.com/yowenter/NotificationFeed</a>  【说出来可能不信，我可不是来骗 star 的】</div>
+<div class="line">这个消息流服务实现了 监听 github 项目 issue 的变化，自动发送邮件的功能。</div>
+<div class="line">后续的的想法是集成更多的消息类型，同时做更优雅的聚合。</div>
+<div class="line">接着会写个比较简单的 UI，也就是做一个 All In One 的 Timeline 应用了。</div>
+<div class="line">后续的可能 Maybe 可以自动处理通知，比如说量化交易，but 我觉得这个可以接上 IFTTT 服务。</div>
+<div class="line">这个项目对于想学 Python 的朋友也很简单很容易入门了，欢迎做一些微小的贡献，Typo 也欢迎。</div>
+</div>
+<p class="feed-meta">Published by <em class="feed-author">写代码的 TAOGOOOO</em> on <em class="feed-date">2019-02-24 00:00:00</em></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Y f = f (Y f)</a></h1>
+
+
+
+<p class="blurb">Taoge 胡思乱想的地方。</p>
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Taoge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/my_projects/build_your_own_notification_feed.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
