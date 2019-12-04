@@ -1,4 +1,0 @@
-Sphinx
-sphinxcontrib-httpdomain
-sphinxcontrib-newsfeed
-recommonmark
