@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Andrew.Ng 机器学习笔记</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="沉迷混杂信息的你，正在被时间抹去" href="../thoughts/information_management.html" />
+    <link rel="prev" title="大象国游记 3⃣️" href="../travel/koland.html" />
+<meta name="viewport" content="width=device-width"></meta>
+	<link rel="alternate"
+		type="application/rss+xml"
+		title="Taoge Blog"
+		href="/index.rss" />
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-69141957-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KVT8TRH');</script>
+<!-- End Google Tag Manager -->
+
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9422289764825717",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVT8TRH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+	
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="andrew-ng">
+<h1>Andrew.Ng 机器学习笔记<a class="headerlink" href="#andrew-ng" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>啥是机器学习？<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><strong>ETP</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Experience</span>
+<span class="o">-</span> <span class="n">Task</span>
+<span class="o">-</span> <span class="n">Performance</span>
+</pre></div>
+</div>
+<p>为了完成某项任务，通过训练，使得机器获取经验，从而达到很好的准确率。
+这就好比巴甫洛夫通过不断摇铃，使得狗有了预判接下来有食物吃的能力一样。</p>
+<p>那么，在机器学习的过程中，我们应该做什么呢？
+我们应该让机器有趋利避害的能力。这样，机器就会在不断的矫枉过正的曲线上趋于稳定。
+正如我们练习投篮一样，在不断的练习中，肌肉获取了大概以某种姿势，某种力道就能投进篮球。</p>
+</div>
+<div class="section" id="id2">
+<h2>啥是监督学习？<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>这是从经验获取知识的一个过程。
+就好比，在无数次看了股票的涨跌之后，我们习得了看见红色就高兴，看见绿色就悲伤的知识。
+相反的，对于无监督学习，则是我们没有告诉机器一些已知的结果，他也无从学习，只能天真的把距离近的划为一类，远的划为另一类。</p>
+</div>
+<div class="section" id="id3">
+<h2>如何选择模型？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>这一切围绕 ETP 里的 Performance 进行选择。
+既要与现有的经验吻合，又不能太死板（过拟合），不能应付新事物。
+所以，选择好的代价函数 或者说惩罚函数是至关重要的。
+一般来说，好的代价函数我觉得要有以下考量：</p>
+<ul class="simple">
+<li><p>凸函数</p></li>
+<li><p>统计学的两类错误的权衡</p></li>
+</ul>
+<p>凸函数不会遇到局部最优的情况。
+两类错误的权衡，好比是错杀一千还是放过一千的考量。比如说信用卡诈骗和抓捕罪犯对两种错误权衡就不一样了。</p>
+<p class="feed-meta">Published by <em class="feed-author">Taoge</em> on <em class="feed-date">2017-05-31 00:00:00</em></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Y f = f (Y f)</a></h1>
+
+
+
+<p class="blurb">Taoge 胡思乱想的地方。</p>
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Taoge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/ml/machine_learning_notes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

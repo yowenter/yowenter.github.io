@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>入门最后一站: OSX 搭建 Hadoop 开发环境</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="百倍程序员的杠杆率和加速度" href="../thoughts/100_times_effective_programmer.html" />
+    <link rel="prev" title="MapReduce, 大数据处理的基石" href="map_reduce.html" />
+<meta name="viewport" content="width=device-width"></meta>
+	<link rel="alternate"
+		type="application/rss+xml"
+		title="Taoge Blog"
+		href="/index.rss" />
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-69141957-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KVT8TRH');</script>
+<!-- End Google Tag Manager -->
+
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9422289764825717",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVT8TRH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+	
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="osx-hadoop">
+<h1>入门最后一站: OSX 搭建 Hadoop 开发环境<a class="headerlink" href="#osx-hadoop" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Well, 这是入门到放弃系列的最后一篇，以后就是修行在个人了。</div>
+<div class="line">Here We Go !</div>
+</div>
+<div class="section" id="id1">
+<h2>工欲善其事，必先利其器<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">好的工具给你高杠杆，来个华丽的撑竿跳，就可日行千里。</div>
+<div class="line">在代码的生命周期里，划分了不同的阶段，简单来说，就是开发阶段和开发之后的阶段(每个阶段都有一套最佳实践)。</div>
+<div class="line">开发阶段的时候，代码只不过是个玩具。开发阶段之后，就是从玩具到工程化的蜕变。(这么多阶段形成的以Github为起点的开发生态圈，活跃着无数IT企业)</div>
+<div class="line">简单来说，我们需要一个集成开发环境(IDE) 和 项目工程管理工具。</div>
+<div class="line">俺使用的IDE 是 Eclipse, 使用 Maven 进行 安装依赖，构建，发布等流程。</div>
+</div>
+</div>
+<div class="section" id="hello-world">
+<h2>照猫画虎，运行你的 Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">游泳是看不会的，编程也是如此。我们从 Hadoop 的示例程序 WordCount 程序开始吧。</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>在 Eclipse 创建一个 Maven 项目, 命名 learn_hadoop</p></li>
+<li><p>新建一个 Java 文件 App.java</p></li>
+<li><p>把示例代码一行一行抄过来(为啥要一行一行呢？当然是要让你想想，每行代码会发生什么)。</p></li>
+<li><p>尝试运行</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">好吧，我当然知道它运行不成功，如果不是的话，你真是撞大运了。</div>
+<div class="line">就我来说，一个真正的野生程序员来说，我从官网上复制粘贴的示例代码</div>
+<div class="line">有 50% 概率会直接报错，一行行鲜红日志触目惊心。</div>
+<div class="line">有 30％则会静默的退出，不给我任何解释。</div>
+<div class="line">有 10% 的会弹框 “电脑缺乏 F**c*K依赖” 。</div>
+<div class="line">有 5% 会提示我重启试试。</div>
+<div class="line">还有 3% 的代码一旦运行，机器会卡死。</div>
+<div class="line">剩下 2% 的能运行，可是打印的全是 “Hello World” 。</div>
+<div class="line">Life is always tough, Let’s fuck it !  (此处安利一下 homebrew, pyfuck 等良心软件)</div>
+</div>
+</div>
+<div class="section" id="debug-don-t-panic">
+<h2>Debug, Don’t Panic !<a class="headerlink" href="#debug-don-t-panic" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">对， 我运行第一个 MapReduce wordcount 程序没有成功。</div>
+<div class="line">这是它的第一个错误 :</div>
+</div>
+<p><strong>Error_01</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">No</span> <span class="n">appenders</span> <span class="n">could</span> <span class="n">be</span> <span class="n">found</span> <span class="k">for</span> <span class="n">logger</span> <span class="o">.</span>
+<span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">Please</span> <span class="n">initialize</span> <span class="n">the</span> <span class="n">log4j</span> <span class="n">system</span> <span class="n">properly</span><span class="o">.</span>
+<span class="n">log4j</span><span class="p">:</span><span class="n">WARN</span> <span class="n">See</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">logging</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">log4j</span><span class="o">/</span><span class="mf">1.2</span><span class="o">/</span><span class="n">faq</span><span class="o">.</span><span class="n">html</span><span class="c1">#noconfig for more info</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">还不算太糟，它给出了一点和日志有关的提示。日志不知道怎么输出，那么应该是少了什么配置。Google 之后发现 log4j 是个高级货，是Java程序员必备良品。</div>
+<div class="line">其实牛人写程序时打日志其实是很有讲究的，日志不仅是 BUG 的最后一颗救命稻草，也是运维监控必备，这一点在分布式系统里尤其重要。</div>
+<div class="line">所以俺对实习生的代码 review 都强调了日志的重要性。</div>
+<div class="line">于是我在项目添加了一个 <cite>log4j.properties</cite> 文件，调成 DEBUG 模式，只能期望看日志不会对着消防水管吃水。</div>
+</div>
+<p><strong>Error_02</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>17/05/11 22:22:16 DEBUG learn_hadoop.App:
+17/05/11 22:22:16 DEBUG security.UserGroupInformation: PrivilegedAction as:wenter (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.connect(Job.java:1306)
+17/05/11 22:23:13 INFO mapreduce.Cluster: java.util.ServiceLoader[org.apache.hadoop.mapreduce.protocol.ClientProtocolProvider]
+17/05/11 22:25:12 INFO mapreduce.Cluster: org.apache.hadoop.mapred.LocalClientProtocolProvider@e041f0c
+17/05/11 22:25:49 INFO mapreduce.Cluster: [org.apache.hadoop.mapred.LocalClientProtocolProvider@e041f0c]
+17/05/11 22:26:05 DEBUG mapreduce.Cluster: Trying ClientProtocolProvider : org.apache.hadoop.mapred.LocalClientProtocolProvider
+17/05/11 22:26:43 INFO mapreduce.Cluster:
+17/05/11 22:26:45 INFO mapreduce.Cluster:
+17/05/11 22:26:57 INFO mapreduce.Cluster:
+17/05/11 22:27:27 DEBUG mapreduce.Cluster: Cannot pick org.apache.hadoop.mapred.LocalClientProtocolProvider as the ClientProtocolProvider - returned null protocol
+17/05/11 22:28:02 DEBUG security.UserGroupInformation: PrivilegedActionException as:wenter (auth:SIMPLE) cause:java.io.IOException: Cannot initialize Cluster. Please check your configuration for mapreduce.framework.name and the correspond server addresses.
+Exception in thread &quot;main&quot; java.io.IOException: Cannot initialize Cluster. Please check your configuration for mapreduce.framework.name and the correspond server addresses.
+        at org.apache.hadoop.mapreduce.Cluster.initialize(Cluster.java:143)
+        at org.apache.hadoop.mapreduce.Cluster.&lt;init&gt;(Cluster.java:108)
+        at org.apache.hadoop.mapreduce.Cluster.&lt;init&gt;(Cluster.java:101)
+        at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1311)
+        at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1307)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:422)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1807)
+        at org.apache.hadoop.mapreduce.Job.connect(Job.java:1306)
+        at org.apache.hadoop.mapreduce.Job.submit(Job.java:1335)
+        at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1359)
+        at learn_hadoop.App.main(App.java:78)
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">对于比较长的日志，我们应该高兴，要是只有一行`you fucked up` 的日志，那才束手无策。</div>
+<div class="line">所以，打日志真的是很重要，程序的日志体现出了程序员的水准。</div>
+<div class="line">这段日志打印出了调用栈信息，初始化 Hadoop 集群信息出错，而且还是 IO Exception 。</div>
+<div class="line">很有可能是网络连接问题。</div>
+<div class="line">于是乎，俺仔细检查了配置，确认集群配置信息正确。然而，并没有解决这个问题。Google 了一下，有找到类似问题。</div>
+<div class="line">有的文章说是缺乏 hadoop mapreduce common client 的包，然并卵。</div>
+<div class="line">所以说，Google 找到的答案，不能全信而不管三七二十一就去试试，浪费精力。</div>
+<div class="line">当然一些通用的问题，能找到不错的答案。我们还是要具体问题具体分析。</div>
+<div class="line">接下来，只有靠自己了。</div>
+<div class="line">结构清晰，设计优良的代码，DEBUG 起来也不是啥难事。Hadoop 里的大部分代码都有注释，这点很有帮助。</div>
+<div class="line">于是我点进出错代码,却显示看不了源代码。</div>
+<div class="line">我又 Google 了一下，发现要把 maven 的依赖包Jar 文件 增加引用源。这样我们就能点进出错信息查看代码(Eclipse Jar 文件小奶瓶出现 📃 的小图标)。</div>
+</div>
+<a class="reference internal image-reference" href="../_images/eclipse_config_jar_source.png"><img alt="../_images/eclipse_config_jar_source.png" src="../_images/eclipse_config_jar_source.png" style="width: 450px; height: 300px;" /></a>
+<div class="line-block">
+<div class="line">加上断点之后，结合源代码和日志，发现了一条新线索，“Trying ClientProtocolProvider : org.apache.hadoop.mapred.LocalClientProtocolProvider ”</div>
+<div class="line">可以看到俺的程序尝试使用 “LocalClientProtocolProvider” 这个服务，也就是说我的程序总是在尝试连接本地的Hadoop，没有连接虚拟机里的集群。</div>
+<div class="line">我在 Hadoop mapreduce client jar 包里 的 META-INF文件夹看到 service 目录，的确有一个 “org.apache.hadoop.mapreduce.protocol.ClientProtocolProvider”文件打开后，里面配置是 “org.apache.hadoop.mapred.LocalClientProtocolProvider”</div>
+<div class="line">所以说，Java 加载的客户端不对。</div>
+</div>
+<a class="reference internal image-reference" href="../_images/hadoop_client_service_provider.png"><img alt="../_images/hadoop_client_service_provider.png" src="../_images/hadoop_client_service_provider.png" style="width: 200px; height: 300px;" /></a>
+<div class="line-block">
+<div class="line">仔细查看之后发现common jar 包只有 LocalProvider。</div>
+<div class="line">那么能够连接远程Hadoop集群的客户端应该是在其他包里。</div>
+<div class="line">最后，我在 maven 的包管理 文件 pom.xml 里增加了 一个依赖:</div>
+</div>
+<p><strong>Hadoop MapReduce Client</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-mapreduce-client-jobclient --&gt;
+&lt;dependency&gt;
+        &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
+        &lt;artifactId&gt;hadoop-mapreduce-client-jobclient&lt;/artifactId&gt;
+        &lt;version&gt;2.8.0&lt;/version&gt;
+&lt;/dependency&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">终于，本地 Hadoop 的应用终于加载了正确的服务，连上了虚拟机的 Hadoop 集群。Bingo!</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Okay, 我们已经入门了。接下来呢？</p>
+</div>
+<div class="section" id="id2">
+<h2>注:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">俺调试这个程序花了一周的工作日晚上，遇到的错误当然也不只两个。大部分错误还是可以看日志解决的。</div>
+<div class="line">由于对 Java 不熟(上周才学Java)，所以调试进展不是很快，期间屡有放弃的念头。人干嘛要这么折腾呢？</div>
+<div class="line">花了不少时间读 Maven 文档，Hadoop 文档，还有 看 Core Java 书籍。</div>
+<div class="line">对一个软件的架构有了一定了解之后，Debug 的时候也会有些头绪。</div>
+<div class="line">还有一个是 Debug 的时候，不能超过 1 小时，时间太长，脑子就会纠结于细节问题，也会淹没于各种网络信息。导致只看见树木，不见森林。</div>
+<div class="line">总结起来就是:</div>
+</div>
+<ul class="simple">
+<li><p>多看书,多看文档，以达到对事物有个大概总体的认识。</p></li>
+<li><p>多出去走走。保持精神通畅，给自己信心。有效治愈气馁，失望情绪。</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Y f = f (Y f)</a></h1>
+
+
+
+<p class="blurb">Taoge 胡思乱想的地方。</p>
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Taoge.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/hadoop/yarn_debug.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
